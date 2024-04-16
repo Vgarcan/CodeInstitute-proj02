@@ -71,30 +71,30 @@ const audioFolder = '../../audio'
 
 // --- TEST EXPORT SECTION --- //
 // Export to JEST Test
-export default {
-    // INFO SECTION
-    now_playing,
-    track_art,
-    track_name,
-    track_artist,
-    // BUTTONS SECTION
-    playpause_btn,
-    next_btn,
-    prev_btn,
-    shuffle_mix,
-    repeat_mix,
-    // TRACK SLIDER SECTION
-    seek_slider,
-    curr_time,
-    total_duration,
-    // VOLUME SECTION
-    volume_slider,
-    // LIST SECTION
-    track_index,
-    isPlaying,
-    updateTimer,
-    // PLAYER
-    curr_track,
-    //PLAYING LIST
-    track_list
-};
+// export default {
+//     // INFO SECTION
+//     now_playing,
+//     track_art,
+//     track_name,
+//     track_artist,
+//     // BUTTONS SECTION
+//     playpause_btn,
+//     next_btn,
+//     prev_btn,
+//     shuffle_mix,
+//     repeat_mix,
+//     // TRACK SLIDER SECTION
+//     seek_slider,
+//     curr_time,
+//     total_duration,
+//     // VOLUME SECTION
+//     volume_slider,
+//     // LIST SECTION
+//     track_index,
+//     isPlaying,
+//     updateTimer,
+//     // PLAYER
+//     curr_track,
+//     //PLAYING LIST
+//     track_list
+// };
