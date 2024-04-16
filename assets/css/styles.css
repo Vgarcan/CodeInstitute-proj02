@@ -1,0 +1,54 @@
+body {
+    padding-top: 30px;
+    background-color: black;
+}
+
+
+/* MAIN CONTAINER */
+
+#player {
+    width: 28rem;
+    border: 0.34rem solid rgb(69, 51, 37);
+    border-radius: 10px;
+    background-color: rgb(12, 34, 65);
+    color: rgb(237, 244, 250);
+}
+
+#player>div {}
+
+
+/* DETAILS SECTION */
+
+#details {}
+
+#track-picture img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+
+/* BUTTONS SECTION */
+
+#buttons {
+    background-color: rgba(127, 255, 212, 0.087);
+}
+
+#playpause-track>i {
+    font-size: 3.2rem;
+}
+
+i {
+    font-size: 1.8rem;
+}
+
+i.side-button {
+    font-size: 1.1rem;
+}
+
+
+/* SLIDER SECTION */
+
+#slider_container {
+    background-color: rgba(127, 255, 212, 0.059);
+}
