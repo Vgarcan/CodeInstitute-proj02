@@ -74,6 +74,17 @@ let volume_slider = document.querySelector("#volume-slider");
 // Create the AUDIO element for the player
 let curr_track = document.createElement('audio');
 
+curr_track.addEventListener('ended', () => {
+    if (track_index === track_list[curr_list_selected].length - 1) {
+        displayResetValues();
+        track_index = 0;
+        isPlaying = false;
+        loadTrack(track_index);
+    } else {
+        nextTrack();
+    };
+});
+
 // Gets the Lists Names
 let rep_lists_names = Object.keys(track_list);
 let curr_list_selected = rep_lists_names[0];
@@ -118,7 +129,9 @@ function loadTrack() {
     track_artist.textContent = track_list[curr_list_selected][track_index]['artist']
 
     if (isPlaying) play();
+
 };
+
 
 // Reset all values to their default
 /**
@@ -169,17 +182,33 @@ function playpauseTrack() {
 };
 
 // Next Track
+/**
+ * This function is used to navigate to the next track in the current playlist.
+ * @function nextTrack
+ * @returns {void} - No return value
+ * @description Increments the track index and loads the next track. If the index goes beyond the last track of the current list, it resets to the first track.
+ * @example
+ * nextTrack();
+ */
 function nextTrack() {
     track_index++;
     if (track_index > track_list[curr_list_selected].length - 1) {
         track_index = 0;
-    };
+    }
     loadTrack();
     displayResetValues();
-    console.log("Next Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path'])
+    // console.log("Next Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path']);
 };
 
 // Previous Track
+/**
+ * Previous Track Function
+ * @function prevTrack
+ * @returns {void} - No return value
+ * @description This function decrements the track index and loads the previous track. If the index goes below 0, it resets to the last track of the current list.
+ * @example
+ * prevTrack();
+ */
 function prevTrack() {
     track_index--;
     if (track_index < 0) {
@@ -187,12 +216,22 @@ function prevTrack() {
     }
     loadTrack();
     displayResetValues();
-    console.log("Prev Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path'])
+    // console.log("Prev Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path']);
 };
 
 // Seek to a specific position
 
 // Set volume
+/**
+ * Sets the volume of the currently playing track.
+ * @function setVolume
+ * @param {number} volume - The volume level between 0 and 100.
+ * @returns {void} - No return value.
+ */
+function setVolume() {
+    curr_track.volume = volume_slider.value / 100;
+    // console.log(curr_track.volume);
+}
 
 // Extras
 // --/ Shuffle
