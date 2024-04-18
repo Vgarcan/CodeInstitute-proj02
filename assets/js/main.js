@@ -127,13 +127,12 @@ function loadTrack() {
     track_art.textContent = track_list[curr_list_selected][track_index]['pic']
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
     track_artist.textContent = track_list[curr_list_selected][track_index]['artist']
+        // --/ Track's Duration display
 
+    // --/ If the ISPLAYING is true continues playing
     if (isPlaying) play();
-
 };
 
-
-// Reset all values to their default
 /**
  * Resets all values to their default.
  * @function displayResetValues
@@ -145,7 +144,6 @@ function displayResetValues() {
     seek_slider.value = 0;
 };
 
-// Play Function
 /**
  * Plays the current track.
  * @function play
@@ -158,7 +156,6 @@ function play() {
     playpause_btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
 };
 
-// Pause Function
 /**
  * Pauses the current track.
  * @function pause
@@ -170,7 +167,7 @@ function pause() {
     // PLAY ICON
     playpause_btn.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
 };
-// (Play -or- Pause) when pushed
+
 /**
  * Plays or pauses the current track when pushed.
  * @function playpauseTrack
@@ -181,14 +178,11 @@ function playpauseTrack() {
     else play();
 };
 
-// Next Track
 /**
- * This function is used to navigate to the next track in the current playlist.
+ * Next Track
  * @function nextTrack
  * @returns {void} - No return value
  * @description Increments the track index and loads the next track. If the index goes beyond the last track of the current list, it resets to the first track.
- * @example
- * nextTrack();
  */
 function nextTrack() {
     track_index++;
@@ -200,14 +194,12 @@ function nextTrack() {
     // console.log("Next Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path']);
 };
 
-// Previous Track
 /**
- * Previous Track Function
+ * Previous Track
  * @function prevTrack
  * @returns {void} - No return value
  * @description This function decrements the track index and loads the previous track. If the index goes below 0, it resets to the last track of the current list.
- * @example
- * prevTrack();
+ * @example prevTrack();
  */
 function prevTrack() {
     track_index--;
@@ -219,9 +211,54 @@ function prevTrack() {
     // console.log("Prev Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path']);
 };
 
+
+/**
+ * Update Track's Times
+ * @function convertTime
+ * @returns {void} - No return value.
+ * @description Updates the current time and total duration of the audio track.
+ */
+function convertTime() {
+    let hhT, mmT, ssT;
+
+    // Calculate the current time in hours, minutes, and seconds.
+    hhT = Math.floor(curr_track.currentTime / 3600);
+    mmT = Math.floor((curr_track.currentTime - hhT * 3600) / 60);
+    ssT = Math.floor(curr_track.currentTime - hhT * 3600 - mmT * 60);
+
+    // Format the current time as a string with leading zeros if necessary.
+    if (hhT === 0) hhT = "";
+    else if (hhT < 10) hhT = "0" + hhT + ":";
+    if (mmT < 10) mmT = "0" + mmT;
+    if (ssT < 10) ssT = "0" + ssT;
+
+    // Update the display of the current time.
+    curr_time.textContent = hhT + mmT + ":" + ssT;
+
+    // Calculate the total duration of the audio track in hours, minutes, and seconds.
+    let hhD, mmD, ssD;
+    hhD = Math.floor(curr_track.duration / 3600);
+    mmD = Math.floor((curr_track.duration - hhD * 3600) / 60);
+    ssD = Math.floor(curr_track.duration - hhD * 3600 - mmD * 60);
+
+    // Format the total duration as a string with leading zeros if necessary.
+    if (hhD === 0) hhD = "";
+    else if (hhD < 10) hhD = "0" + hhD + ":";
+    if (mmD < 10) mmD = "0" + mmD;
+    if (ssD < 10) ssD = "0" + ssD;
+
+    // Update the display of the total duration.
+    total_duration.textContent = hhD + mmD + ":" + ssD;
+};
+
+setInterval(convertTime, 1000)
+
+// Update SEEK BAR position in the DOM
+
+
 // Seek to a specific position
 
-// Set volume
+
 /**
  * Sets the volume of the currently playing track.
  * @function setVolume
