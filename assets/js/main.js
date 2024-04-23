@@ -120,7 +120,7 @@ curr_track.addEventListener('ended', () => {
 });
 
 // Globally used values
-let track_index = 0;
+let track_index = -1;
 let isPlaying = false;
 // let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
 
@@ -280,7 +280,15 @@ function setVolume() {
     curr_track.volume = volume_slider.value / 100;
 };
 
+// Initialize program
+// --/ starts the list
+nextTrack();
+
+// --/ Updates the current time and total duration of the audio track.
 setInterval(convertTime, 1000);
+
+
+
 // Extras
 // --/ Shuffle
 // --/ Repeat
