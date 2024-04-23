@@ -99,6 +99,7 @@ rep_lists_names.forEach(
 selectedList.addEventListener('change', () => {
     curr_list_selected = selectedList.value;
 });
+
 //! ####################################
 seek_slider.addEventListener('mousedown', () => {
     clearInterval(updateSeekBarPosition);
@@ -108,6 +109,7 @@ seek_slider.addEventListener('mouseup', () => {
     setInterval(updateSeekBarPosition, 1000);
 });
 //! ####################################
+
 curr_track.addEventListener('ended', () => {
     if (track_index === track_list[curr_list_selected].length - 1) {
         displayResetValues();
@@ -257,8 +259,6 @@ function convertTime() {
     // Update the display of the total duration.
     total_duration.textContent = hhD + mmD + ":" + ssD;
 };
-
-
 
 // Update SEEK BAR position in the DOM
 function updateSeekBarPosition() {
