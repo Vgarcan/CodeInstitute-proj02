@@ -100,13 +100,13 @@ selectedList.addEventListener('change', () => {
     curr_list_selected = selectedList.value;
 });
 
-seek_slider.addEventListener('click', () => {
+seek_slider.addEventListener('mousedown', () => {
     clearInterval(updateSeekBarPosition);
 });
 
-// seek_slider.addEventListener('mouseup', () => {
-//     setInterval(updateSeekBarPosition, 1000);
-// });
+seek_slider.addEventListener('mouseup', () => {
+    setInterval(updateSeekBarPosition, 1000);
+});
 
 curr_track.addEventListener('ended', () => {
     if (track_index === track_list[curr_list_selected].length - 1) {
