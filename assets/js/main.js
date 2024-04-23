@@ -112,7 +112,7 @@ curr_track.addEventListener('ended', () => {
     if (track_index === track_list[curr_list_selected].length - 1) {
         displayResetValues();
         track_index = 0;
-        isPlaying = false;
+        playpauseTrack()
         loadTrack(track_index);
     } else {
         nextTrack();
