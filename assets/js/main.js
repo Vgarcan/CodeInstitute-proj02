@@ -2,25 +2,25 @@ const track_list = {
     'JMP Studio': [{
             "name": "West Virginia (Diego - Cover)",
             "artist": "JMP",
-            "pic": "path/to/trackA1.jpg",
+            "pic": "assets/audio/josus/country-road.png",
             "path": "assets/audio/josus/song1.mp3"
         },
         {
             "name": "Boom Boom! (Vengaboys - Cover)",
             "artist": "JMP & Xema",
-            "pic": "path/to/trackB1.jpg",
+            "pic": "assets/audio/josus/boom-boom.jpg",
             "path": "assets/audio/josus/song2.mp3"
         },
         {
             "name": "Dreams (AI - Cover)",
             "artist": "JMP",
-            "pic": "path/to/trackB1.jpg",
+            "pic": "assets/audio/josus/ana-belen.jpg",
             "path": "assets/audio/josus/song3.mp3"
         },
         {
             "name": "La vereda de la puerta de atras (La Colega - Cover)",
             "artist": "JMP & La Colega",
-            "pic": "path/to/trackB1.jpg",
+            "pic": "assets/audio/josus/la-vereda.png",
             "path": "assets/audio/josus/song4.mp3"
         },
     ],
@@ -38,13 +38,13 @@ const track_list = {
         },
     ],
     'list-C': [{
-            "name": "Track CC1",
+            "name": "Track C1",
             "artist": "Artist CC1",
             "pic": "path/to/trackCC1.jpg",
             "path": "path/to/trackCC1.mp3"
         },
         {
-            "name": "Track BC2",
+            "name": "Track C2",
             "artist": "Artist BC2",
             "pic": "path/to/trackBC2.jpg",
             "path": "path/to/trackBC2.mp3"
@@ -74,17 +74,6 @@ let volume_slider = document.querySelector("#volume-slider");
 // Create the AUDIO element for the player
 let curr_track = document.createElement('audio');
 
-curr_track.addEventListener('ended', () => {
-    if (track_index === track_list[curr_list_selected].length - 1) {
-        displayResetValues();
-        track_index = 0;
-        isPlaying = false;
-        loadTrack(track_index);
-    } else {
-        nextTrack();
-    };
-});
-
 // Gets the Lists Names
 let rep_lists_names = Object.keys(track_list);
 let curr_list_selected = rep_lists_names[0];
@@ -105,15 +94,35 @@ rep_lists_names.forEach(
         selectedList.add(option); // Add the newly created OPTION element to the SELECT element
     });
 
+// EVENTS LISTENERS //
 // Add an event listener to the select element to update the currently selected list
 selectedList.addEventListener('change', () => {
     curr_list_selected = selectedList.value;
 });
 
+seek_slider.addEventListener('click', () => {
+    clearInterval(updateSeekBarPosition);
+});
+
+// seek_slider.addEventListener('mouseup', () => {
+//     setInterval(updateSeekBarPosition, 1000);
+// });
+
+curr_track.addEventListener('ended', () => {
+    if (track_index === track_list[curr_list_selected].length - 1) {
+        displayResetValues();
+        track_index = 0;
+        isPlaying = false;
+        loadTrack(track_index);
+    } else {
+        nextTrack();
+    };
+});
+
 // Globally used values
 let track_index = 0;
 let isPlaying = false;
-let updateTimer;
+// let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
 
 // --- FUNCTIONALITIES SECTION --- //
 
@@ -124,7 +133,7 @@ function loadTrack() {
     // --/ Load new Track
     curr_track.src = track_list[curr_list_selected][track_index]['path'];
     // --/ Display Track's details
-    track_art.textContent = track_list[curr_list_selected][track_index]['pic']
+    track_art.querySelector('img').src = track_list[curr_list_selected][track_index]['pic']
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
     track_artist.textContent = track_list[curr_list_selected][track_index]['artist']
         // --/ Track's Duration display
@@ -152,6 +161,7 @@ function displayResetValues() {
 function play() {
     curr_track.play();
     isPlaying = true;
+    setInterval(updateSeekBarPosition, 1000);
     // PAUSE ICON
     playpause_btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
 };
@@ -191,7 +201,6 @@ function nextTrack() {
     }
     loadTrack();
     displayResetValues();
-    // console.log("Next Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path']);
 };
 
 /**
@@ -208,9 +217,7 @@ function prevTrack() {
     }
     loadTrack();
     displayResetValues();
-    // console.log("Prev Button Pushed\n=>>PATH: ", track_list[curr_list_selected][track_index]['path']);
 };
-
 
 /**
  * Update Track's Times
@@ -251,13 +258,17 @@ function convertTime() {
     total_duration.textContent = hhD + mmD + ":" + ssD;
 };
 
-setInterval(convertTime, 1000)
+
 
 // Update SEEK BAR position in the DOM
-
+function updateSeekBarPosition() {
+    seek_slider.value = curr_track.currentTime / (curr_track.duration / 100)
+};
 
 // Seek to a specific position
-
+function seekTo() {
+    curr_track.currentTime = seek_slider.value * (curr_track.duration / 100)
+};
 
 /**
  * Sets the volume of the currently playing track.
@@ -267,9 +278,9 @@ setInterval(convertTime, 1000)
  */
 function setVolume() {
     curr_track.volume = volume_slider.value / 100;
-    // console.log(curr_track.volume);
-}
+};
 
+setInterval(convertTime, 1000);
 // Extras
 // --/ Shuffle
 // --/ Repeat
