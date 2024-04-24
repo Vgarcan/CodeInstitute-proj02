@@ -32,12 +32,12 @@
             <!-- INFO SECTION -->
             <div id="details" class="row py-3 sect-slice">
                 <div id="now-playing-list" class="col-12 mb-2">PLAYING *x* OF *y*</div>
-                <div id="track-picture" class="col-12 col-md-6">
+                <div id="track-picture" class="col-12 col-sm-6">
                     <img src="assets/imgs/pic01.jpg" alt="Track Image" class="sect-slice">
                 </div>
-                <div class="col-12 col-md-6 align-self-center">
+                <div class="col-12 col-sm-6 align-self-center">
                     <div class="row">
-                        <div id="track-name" class="col-12 pb-3">Track Name</div>
+                        <div id="track-name" class="col-12 py-2">Track Name</div>
                         <div id="track-artist" class="col-12">Track Artist</div>
                     </div>
                 </div>
@@ -48,22 +48,25 @@
             <div id="buttons" class="row d-flex py-1 sect-slice spread-shadow">
 
                 <!-- Button #1 - Shuffle -->
-                <div id="shuffle-mix" class="col-2  align-self-center " onclick="shuffleMix()">
+                <div id="shuffle-mix" class="col-2 align-self-center " onclick="shuffleMix()">
                     <i class="bi bi-shuffle side-button"></i>
                 </div>
 
-                <!-- Button #A - Previous -->
-                <div id="prev-track" class="col-3 text-end align-self-center" onclick="prevTrack()">
-                    <i class="bi bi-skip-backward-btn-fill"></i>
+                <div id="main-buttons-display" class="col-8 d-flex justify-content-center">
+                    <!-- Button #A - Previous -->
+                    <div id="prev-track" class="px-2 text-end align-self-center" onclick="prevTrack()">
+                        <i class="bi bi-skip-backward-btn-fill"></i>
+                    </div>
+                    <!-- Button #B - Play/Pause -->
+                    <div id="playpause-track" class="px-2 " onclick="playpauseTrack()">
+                        <i class="bi bi-play-circle-fill"></i>
+                    </div>
+                    <!-- Button #C - Next -->
+                    <div id="next-track" class="px-2 text-start align-self-center" onclick="nextTrack()">
+                        <i class="bi bi-skip-forward-btn-fill"></i>
+                    </div>
                 </div>
-                <!-- Button #B - Play/Pause -->
-                <div id="playpause-track" class="col-2" onclick="playpauseTrack()">
-                    <i class="bi bi-play-circle-fill"></i>
-                </div>
-                <!-- Button #C - Next -->
-                <div id="next-track" class="col-3 text-start align-self-center" onclick="nextTrack()">
-                    <i class="bi bi-skip-forward-btn-fill"></i>
-                </div>
+
 
                 <!-- Button #2 - Repeat -->
                 <div id="repeat-mix" class="col-2 align-self-center " onclick="repeatMix()">

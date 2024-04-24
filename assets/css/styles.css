@@ -55,6 +55,18 @@ body {
     box-shadow: 1.4px 2.2px 5px rgba(19, 211, 19, 0.954);
 }
 
+#track-name {
+    font-size: 1.42rem;
+    color: #ffd518e9;
+    text-shadow: 3px 2.4px 4.4px #73E60C;
+}
+
+#track-artist {
+    font-size: 1.22rem;
+    color: #11ab3d;
+    text-shadow: 2px 3px 5.76px #ffd518e9;
+}
+
 
 /* i OPTIONS  */
 
