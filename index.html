@@ -23,16 +23,16 @@
         <div id="player" class='container text-center'>
 
             <!-- BANNER SECTION -->
-            <div id="banner" class="row py-0">
+            <div id="banner" class="row py-0 sect-slice">
                 <div id="title" class="col-12 display-4"><img src="assets\imgs\logo-img.png" id="logo-lemon" alt="Title logo" height="120px"> Xemusic</div>
             </div>
             <!-- END BANNER SECTION -->
 
             <!-- INFO SECTION -->
-            <div id="details" class="row py-3">
+            <div id="details" class="row py-3 sect-slice">
                 <div id="now-playing-list" class="col-12 mb-4">PLAYING *x* OF *y*</div>
-                <div id="track-picture" class="col-6 ">
-                    <img src="assets/imgs/pic01.jpg" alt="Track Image">
+                <div id="track-picture" class="col-6 sect">
+                    <img src="assets/imgs/pic01.jpg" alt="Track Image" class="sect-slice">
                 </div>
                 <div class="col-6 align-self-center">
                     <div class="row">
@@ -44,7 +44,7 @@
             <!-- END INFO SECTION -->
 
             <!-- BUTTONS SECTION -->
-            <div id="buttons" class="row d-flex py-1">
+            <div id="buttons" class="row d-flex py-1 sect-slice spread-shadow">
 
                 <!-- Button #1 - Shuffle -->
                 <div id="shuffle-mix" class="col-2  align-self-center " onclick="shuffleMix()">
@@ -72,7 +72,7 @@
             <!-- END BUTTONS SECTION -->
 
             <!-- TRACK SLIDER SECTION -->
-            <div id="slider-container" class="row d-flex py-2 ">
+            <div id="slider-container" class="row d-flex py-2 sect-slice">
                 <div id="current-time" class="col-4">00:00</div>
                 <input class="col-4 p-0" id="seek-slider" type="range" min="0" max="100" value="0" onchange="seekTo()">
                 <div id="total-duration" class="col-4">00:00</div>
@@ -80,7 +80,7 @@
             <!-- END TRACK SLIDER SECTION -->
 
             <!-- VOLUME SECTION-->
-            <div id="slider_container" class="row d-flex">
+            <div id="slider_container" class="row d-flex sect-slice spread-shadow">
                 <i class="col-4 bi bi-volume-down-fill text-end"></i>
                 <input class="col-4 p-0" id="volume-slider" type="range" min="0" max="100" value="65" onchange="setVolume()">
                 <i class="col-4 bi bi-volume-up-fill text-start"></i>
