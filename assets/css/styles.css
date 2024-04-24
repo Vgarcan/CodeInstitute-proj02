@@ -8,9 +8,9 @@ body {
 
 #player {
     width: 28rem;
-    border: 0.34rem solid rgb(69, 51, 37);
+    border: 0.34rem solid rgb(216, 236, 219);
     border-radius: 10px;
-    background-color: rgb(12, 34, 65);
+    background-color: rgb(12, 15, 1);
     color: rgb(237, 244, 250);
 }
 
@@ -20,7 +20,7 @@ body {
 /* TITLE SECTION */
 
 #banner {
-    background-color: rgba(215, 79, 79, 0.767);
+    background-color: rgb(9, 102, 9);
 }
 
 
@@ -35,10 +35,23 @@ body {
 }
 
 
+/* i SECTION  */
+
+i {
+    color: rgb(4, 110, 18);
+    text-shadow: 1.4px 1.2px rgba(2, 66, 2, 0.486);
+}
+
+i:hover {
+    color: rgb(12, 226, 41);
+    text-shadow: 1.4px 1.2px rgba(2, 66, 2, 0.486);
+}
+
+
 /* BUTTONS SECTION */
 
 #buttons {
-    background-color: rgba(127, 255, 212, 0.087);
+    background-color: rgba(235, 224, 72, 0.74);
 }
 
 #playpause-track>i {
@@ -57,5 +70,5 @@ i.side-button {
 /* SLIDER SECTION */
 
 #slider_container {
-    background-color: rgba(127, 255, 212, 0.059);
+    background-color: rgba(235, 224, 72, 0.74);
 }
