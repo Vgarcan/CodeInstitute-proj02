@@ -17,12 +17,15 @@ body {
 #player>div {}
 
 
-/* TITLE SECTION */
+/* GLOBALS */
 
 .sect-slice {
     border: 0.08rem solid rgb(216, 236, 219);
     /* border-radius: 10px; */
 }
+
+
+/* TITLE SECTION */
 
 .spread-shadow {
     box-shadow: 0 -4.2px 5px rgba(216, 236, 219, 0.486);
@@ -30,9 +33,13 @@ body {
 }
 
 #banner {
-    background-color: rgba(8, 181, 8, 0.66);
+    background-color: #008B27;
     /* border: solid 1px #fff; */
     box-shadow: 0 4.2px 5px rgba(216, 236, 219, 0.486);
+}
+
+#banner>img {
+    width: 100%;
 }
 
 
@@ -48,23 +55,22 @@ body {
 }
 
 
-/* i SECTION  */
+/* i OPTIONS  */
 
 i {
-    color: rgb(4, 110, 18);
-    text-shadow: 1.4px 2.2px 3px rgba(2, 66, 2, 0.486);
+    color: #11ab3d;
+    text-shadow: 1.4px 2.2px 3px rgba(6, 89, 2, 0.861);
 }
 
 i:hover {
-    color: rgb(12, 226, 41);
-    /* text-shadow: 1.4px 2.2px 3px rgba(2, 66, 2, 0.486); */
+    color: #73E60C;
 }
 
 
 /* BUTTONS SECTION */
 
 #buttons {
-    background-color: rgba(224, 222, 59, 0.89);
+    background-color: #ffd518e9;
 }
 
 #playpause-track>i {
@@ -76,12 +82,12 @@ i {
 }
 
 i.side-button {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 
 /* SLIDER SECTION */
 
 #slider_container {
-    background-color: rgba(224, 222, 59, 0.89);
+    background-color: #ffd518e9;
 }
