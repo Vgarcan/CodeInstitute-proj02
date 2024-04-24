@@ -20,7 +20,7 @@ const track_list = {
         {
             "name": "La vereda de la puerta de atras (La Colega - Cover)",
             "artist": "JMP & La Colega",
-            "pic": "assets/audio/josus/la-vereda.png",
+            "pic": "assets/audio/josus/la-verea.png",
             "path": "assets/audio/josus/song4.mp3"
         },
     ],
