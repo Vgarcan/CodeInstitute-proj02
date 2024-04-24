@@ -102,3 +102,9 @@ i.side-button {}
 #slider_container {
     background-color: #ffd518e9;
 }
+
+@media screen and (min-width: 768px) {
+    #player {
+        width: 55%;
+    }
+}
