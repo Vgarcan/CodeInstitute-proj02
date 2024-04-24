@@ -39,19 +39,19 @@ body {
 
 i {
     color: rgb(4, 110, 18);
-    text-shadow: 1.4px 1.2px rgba(2, 66, 2, 0.486);
+    text-shadow: 1.4px 2.2px 3px rgba(2, 66, 2, 0.486);
 }
 
 i:hover {
     color: rgb(12, 226, 41);
-    text-shadow: 1.4px 1.2px rgba(2, 66, 2, 0.486);
+    /* text-shadow: 1.4px 2.2px 3px rgba(2, 66, 2, 0.486); */
 }
 
 
 /* BUTTONS SECTION */
 
 #buttons {
-    background-color: rgba(235, 224, 72, 0.74);
+    background-color: rgba(228, 231, 49, 0.89);
 }
 
 #playpause-track>i {
@@ -70,5 +70,5 @@ i.side-button {
 /* SLIDER SECTION */
 
 #slider_container {
-    background-color: rgba(235, 224, 72, 0.74);
+    background-color: rgba(228, 231, 49, 0.89);
 }
