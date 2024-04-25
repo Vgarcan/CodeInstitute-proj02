@@ -1,6 +1,10 @@
 body {
     padding-top: 30px;
-    background-color: black;
+    background-color: rgba(6, 114, 228, 0.532);
+    background-image: url("/assets/imgs/bg-sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
