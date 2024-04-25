@@ -206,7 +206,7 @@ function nextTrack() {
     if (shuffleOn) randomizeNextSong();
     else if (track_index > track_list[curr_list_selected].length - 1) {
         track_index = 0;
-    }
+    };
     loadTrack();
     displayResetValues();
 };
@@ -256,14 +256,12 @@ function shuffleMix() {
 };
 
 /**
- * Resets the current track to the beginning and updates the UI.
- * @function resetTrack
+ * Resets the current track to the beginning.
+ * @function repeatActualSong
  * @returns {void} - No return value
  */
-function resetTrack() {
-    curr_track.currentTime = 0;
+function repeatActualSong() {
     loadTrack();
-    displayResetValues();
 };
 
 /**
@@ -279,7 +277,7 @@ function repeatMix() {
     } else {
         repeatOn = true;
         repeat_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
-    }
+    };
 };
 
 /**
