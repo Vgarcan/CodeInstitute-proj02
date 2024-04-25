@@ -7,8 +7,6 @@ body {
 /* MAIN CONTAINER */
 
 #player {
-    /* width: 75%;
-    height: 75%; */
     border: 0.34rem solid rgb(216, 236, 219);
     border-radius: 10px;
     background-color: rgb(12, 15, 1);
@@ -22,7 +20,6 @@ body {
 
 .sect-slice {
     border: 0.08rem solid rgb(216, 236, 219);
-    /* border-radius: 10px; */
 }
 
 
@@ -30,12 +27,10 @@ body {
 
 .spread-shadow {
     box-shadow: 0 -4.2px 5px rgba(216, 236, 219, 0.486);
-    /* box-shadow: 0 4.2px 5px 0 4.2px rgba(216, 236, 219, 0.486); */
 }
 
 #banner {
     background-color: #008B27;
-    /* border: solid 1px #fff; */
     box-shadow: 0 4.2px 5px rgba(216, 236, 219, 0.486);
 }
 

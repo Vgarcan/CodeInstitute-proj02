@@ -111,19 +111,24 @@ seek_slider.addEventListener('mouseup', () => {
 //! ####################################
 
 curr_track.addEventListener('ended', () => {
-    if (track_index === track_list[curr_list_selected].length - 1) {
-        displayResetValues();
-        track_index = 0;
-        playpauseTrack()
-        loadTrack(track_index);
-    } else {
-        nextTrack();
+    if (repeatOn) repeatActualSong();
+    else {
+        if (track_index === track_list[curr_list_selected].length - 1) {
+            displayResetValues();
+            track_index = 0;
+            playpauseTrack()
+            loadTrack(track_index);
+        } else {
+            nextTrack();
+        };
     };
 });
 
 // Globally used values
 let track_index = -1;
 let isPlaying = false;
+let shuffleOn = false;
+let repeatOn = false;
 // let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
 
 // --- FUNCTIONALITIES SECTION --- //
@@ -198,7 +203,8 @@ function playpauseTrack() {
  */
 function nextTrack() {
     track_index++;
-    if (track_index > track_list[curr_list_selected].length - 1) {
+    if (shuffleOn) randomizeNextSong();
+    else if (track_index > track_list[curr_list_selected].length - 1) {
         track_index = 0;
     }
     loadTrack();
@@ -219,6 +225,61 @@ function prevTrack() {
     }
     loadTrack();
     displayResetValues();
+};
+
+/**
+ *  Randomize next Song
+ * @function randomizeNextSong
+ * @description Shuffles the order of the songs in the currently selected list and loads the first song.
+ */
+function randomizeNextSong() {
+
+    track_index = Math.floor(Math.random() * track_list[curr_list_selected].length);
+    loadTrack();
+    displayResetValues();
+};
+
+/**
+ * Changes the shuffle state of the currently selected list.
+ * @function shuffleMix
+ * @description If the shuffle is already on, it will be turned off and the color of the shuffle icon will revert to its default color. If the shuffle is off, it will be turned on and the color of the shuffle icon will change to turquoise.
+ * @returns {void} - No return value
+ */
+function shuffleMix() {
+    if (shuffleOn) {
+        shuffleOn = false;
+        shuffle_mix.getElementsByTagName('i')[0].style.color = '';
+    } else {
+        shuffleOn = true;
+        shuffle_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
+    }
+};
+
+/**
+ * Resets the current track to the beginning and updates the UI.
+ * @function resetTrack
+ * @returns {void} - No return value
+ */
+function resetTrack() {
+    curr_track.currentTime = 0;
+    loadTrack();
+    displayResetValues();
+};
+
+/**
+ * Changes the repeat state of the currently selected list.
+ * @function repeatMix
+ * @description If the repeat is already on, it will be turned off and the color of the repeat icon will revert to its default color. If the repeat is off, it will be turned on and the color of the repeat icon will change to turquoise.
+ * @returns {void} - No return value
+ */
+function repeatMix() {
+    if (repeatOn) {
+        repeatOn = false;
+        repeat_mix.getElementsByTagName('i')[0].style.color = '';
+    } else {
+        repeatOn = true;
+        repeat_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
+    }
 };
 
 /**
@@ -260,20 +321,28 @@ function convertTime() {
     total_duration.textContent = hhD + mmD + ":" + ssD;
 };
 
-// Update SEEK BAR position in the DOM
+/**
+ * Seeks to a specific position in the currently playing track.
+ * @function seekTo
+ * @returns {void} - No return value
+ */
 function updateSeekBarPosition() {
     seek_slider.value = curr_track.currentTime / (curr_track.duration / 100)
 };
 
-// Seek to a specific position
+/**
+ * Seeks to a specific position in the currently playing track.
+ * @function seekTo
+ * @returns {void} - No return value
+ * @description This function sets the current time of the audio track to the value of the seek slider.
+ */
 function seekTo() {
-    curr_track.currentTime = seek_slider.value * (curr_track.duration / 100)
+    curr_track.currentTime = seek_slider.value * (curr_track.duration / 100);
 };
 
 /**
  * Sets the volume of the currently playing track.
  * @function setVolume
- * @param {number} volume - The volume level between 0 and 100.
  * @returns {void} - No return value.
  */
 function setVolume() {
@@ -286,7 +355,6 @@ nextTrack();
 
 // --/ Updates the current time and total duration of the audio track.
 setInterval(convertTime, 1000);
-
 
 
 // Extras
