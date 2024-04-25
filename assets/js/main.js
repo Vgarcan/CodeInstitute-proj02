@@ -102,18 +102,20 @@ selectedList.addEventListener('change', () => {
     curr_list_selected = selectedList.value;
 });
 
-volume_down.addEventListener('click', () => {
-    curr_track.volume -= 10 / 100;
+volume_up.addEventListener('click', () => {
+    if (curr_track.volume >= 0.91) curr_track.volume = 1;
+    else curr_track.volume = (Math.floor(volume_slider.value) + 10) / 100;
     volume_slider.value = curr_track.volume * 100;
 });
 
-volume_up.addEventListener('click', () => {
-    curr_track.volume += 10 / 100;
+volume_down.addEventListener('click', () => {
+    if (curr_track.volume <= 0.09) curr_track.volume = 0;
+    else curr_track.volume = (Math.floor(volume_slider.value) - 10) / 100;
     volume_slider.value = curr_track.volume * 100;
 });
 
 //! ####################################
-seek_slider.addEventListener('change', () => {
+seek_slider.addEventListener('drag', () => {
     clearInterval(updateSeekBarPosition);
 });
 
@@ -141,6 +143,7 @@ let track_index = -1;
 let isPlaying = false;
 let shuffleOn = false;
 let repeatOn = false;
+curr_track.volume = volume_slider.value / 100;
 // let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
 
 // --- FUNCTIONALITIES SECTION --- //
@@ -300,6 +303,8 @@ function repeatMix() {
  * @description Updates the current time and total duration of the audio track.
  */
 function convertTime() {
+    total_duration.textContent = "00:00";
+
     let hhT, mmT, ssT;
 
     // Calculate the current time in hours, minutes, and seconds.
@@ -358,14 +363,6 @@ function seekTo() {
  */
 function setVolume() {
     curr_track.volume = volume_slider.value / 100;
-};
-
-function addVolume() {
-    curr_track.volume += 10
-};
-
-function substractVolume() {
-    curr_track.volume -= 10
 };
 
 // Initialize program

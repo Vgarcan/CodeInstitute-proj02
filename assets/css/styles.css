@@ -13,7 +13,7 @@ body {
 #player {
     border: 0.34rem solid rgb(216, 236, 219);
     border-radius: 10px;
-    background-color: rgba(12, 15, 1, 0.957);
+    background-color: rgba(12, 15, 1, 0.872);
     color: rgb(237, 244, 250);
 }
 
@@ -63,14 +63,14 @@ body {
 #track-artist {
     font-size: 1.22rem;
     color: #11ab3d;
-    text-shadow: 2px 3px 5.76px #ffd518e9;
+    text-shadow: 2px 3px 5.76px #ffd818e9;
 }
 
 
 /* i OPTIONS  */
 
 i {
-    color: #11ab3d;
+    color: #0d9433;
     text-shadow: 1.4px 2.2px 3px rgba(6, 89, 2, 0.861);
 }
 
@@ -82,7 +82,7 @@ i:hover {
 /* BUTTONS SECTION */
 
 #buttons {
-    background-color: #ffd518e9;
+    background-color: #ffda37e9;
 }
 
 i {
@@ -99,7 +99,7 @@ i.side-button {}
 /* SLIDER SECTION */
 
 #slider_container {
-    background-color: #ffd518e9;
+    background-color: #ffda37e9;
 }
 
 @media screen and (min-width: 768px) {
