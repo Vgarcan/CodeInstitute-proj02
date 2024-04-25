@@ -70,6 +70,8 @@ let curr_time = document.querySelector("#current-time");
 let total_duration = document.querySelector("#total-duration");
 // --/Volume
 let volume_slider = document.querySelector("#volume-slider");
+let volume_down = document.querySelector("#vol-down");
+let volume_up = document.querySelector("#vol-up");
 
 // Create the AUDIO element for the player
 let curr_track = document.createElement('audio');
@@ -100,8 +102,18 @@ selectedList.addEventListener('change', () => {
     curr_list_selected = selectedList.value;
 });
 
+volume_down.addEventListener('click', () => {
+    curr_track.volume -= 10 / 100;
+    volume_slider.value = curr_track.volume * 100;
+});
+
+volume_up.addEventListener('click', () => {
+    curr_track.volume += 10 / 100;
+    volume_slider.value = curr_track.volume * 100;
+});
+
 //! ####################################
-seek_slider.addEventListener('mousedown', () => {
+seek_slider.addEventListener('change', () => {
     clearInterval(updateSeekBarPosition);
 });
 
@@ -171,6 +183,7 @@ function play() {
     setInterval(updateSeekBarPosition, 1000);
     // PAUSE ICON
     playpause_btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
+    playpause_btn.getElementsByTagName('i')[0].style.color = 'turquoise';
 };
 
 /**
@@ -183,6 +196,7 @@ function pause() {
     isPlaying = false;
     // PLAY ICON
     playpause_btn.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
+    playpause_btn.getElementsByTagName('i')[0].style.color = '';
 };
 
 /**
@@ -216,13 +230,12 @@ function nextTrack() {
  * @function prevTrack
  * @returns {void} - No return value
  * @description This function decrements the track index and loads the previous track. If the index goes below 0, it resets to the last track of the current list.
- * @example prevTrack();
  */
 function prevTrack() {
     track_index--;
     if (track_index < 0) {
         track_index = track_list[curr_list_selected].length - 1;
-    }
+    };
     loadTrack();
     displayResetValues();
 };
@@ -345,6 +358,14 @@ function seekTo() {
  */
 function setVolume() {
     curr_track.volume = volume_slider.value / 100;
+};
+
+function addVolume() {
+    curr_track.volume += 10
+};
+
+function substractVolume() {
+    curr_track.volume -= 10
 };
 
 // Initialize program
