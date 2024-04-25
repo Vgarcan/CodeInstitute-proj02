@@ -13,7 +13,7 @@ body {
 #player {
     border: 0.34rem solid rgb(216, 236, 219);
     border-radius: 10px;
-    background-color: rgb(12, 15, 1);
+    background-color: rgba(12, 15, 1, 0.957);
     color: rgb(237, 244, 250);
 }
 
