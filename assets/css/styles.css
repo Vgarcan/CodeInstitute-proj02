@@ -1,5 +1,5 @@
 body {
-    padding-top: 30px;
+    padding-top: 15px;
     background-color: rgba(6, 114, 228, 0.532);
     background-image: url("/assets/imgs/bg-sky.jpg");
     background-repeat: no-repeat;
@@ -47,6 +47,29 @@ body {
 
 #details {}
 
+#now-playing-list {
+    /* display: flex; */
+}
+
+#lists-icon {
+    background-image: url('/assets/imgs/lemon_music.ico');
+    height: 42px;
+}
+
+.btn {
+    background-color: #ffd818e9;
+    text-shadow: 3px 2.4px 4.4px #73E60C;
+    box-shadow: 3px 2.4px 4.4px #73E60C;
+    border-radius: 30rem 40rem 0 40rem;
+}
+
+.btn:hover {
+    background-color: #73E60C;
+    text-shadow: 3px 2.4px 4.4px #ffd818e9;
+    box-shadow: 3px 2.4px 4.4px #ffd818e9;
+    color: black;
+}
+
 #track-picture img {
     width: 10rem;
     height: 10rem;
@@ -71,7 +94,7 @@ body {
 
 i {
     color: #0d9433;
-    text-shadow: 1.4px 2.2px 3px rgba(6, 89, 2, 0.861);
+    text-shadow: 1.4px 2.2px 3px #065902dc;
 }
 
 i:hover {
