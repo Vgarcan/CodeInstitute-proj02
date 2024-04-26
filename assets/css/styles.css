@@ -1,7 +1,7 @@
 body {
     padding-top: 15px;
     background-color: rgba(6, 114, 228, 0.532);
-    background-image: url("/assets/imgs/bg-sky.jpg");
+    background-image: url("/CodeInstitute-proj02/assets/imgs/bg-sky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -52,7 +52,7 @@ body {
 }
 
 #lists-icon {
-    background-image: url('/assets/imgs/lemon_music.ico');
+    background-image: url('/CodeInstitute-proj02/assets/imgs/lemon_music.ico');
     height: 42px;
 }
 
