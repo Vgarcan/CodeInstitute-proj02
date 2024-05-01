@@ -125,6 +125,7 @@ let track_index = -1;
 let isPlaying = false;
 let shuffleOn = false;
 let repeatOn = false;
+let repeatSameOn = false;
 curr_track.volume = volume_slider.value / 100;
 
 // TIME FETCHING
@@ -173,7 +174,7 @@ volume_down.addEventListener('click', () => {
 });
 
 //! ####################################
-seek_slider.addEventListener('drag', () => {
+seek_slider.addEventListener('input', () => {
     clearInterval(updateSeekBarPosition);
 });
 
@@ -189,9 +190,15 @@ seek_slider.addEventListener('mouseup', () => {
  * @description If the repeat is already on, it will be turned off and the color of the repeat icon will revert to its default color. If the repeat is off, it will be turned on and the color of the repeat icon will change to turquoise.
  */
 curr_track.addEventListener('ended', () => {
-    if (repeatOn) repeatActualSong();
+    if (repeatSameOn) repeatActualSong();
     else {
-        if (track_index === track_list[curr_list_selected].length - 1) {
+        if (track_index === track_list[curr_list_selected].length - 1 && repeatOn) {
+            displayResetValues();
+            track_index = 0;
+            playpauseTrack()
+            loadTrack(track_index);
+            playpauseTrack();
+        } else if (track_index === track_list[curr_list_selected].length - 1) {
             displayResetValues();
             track_index = 0;
             playpauseTrack()
@@ -345,11 +352,20 @@ function repeatActualSong() {
  * @returns {void} - No return value
  */
 function repeatMix() {
-    if (repeatOn) {
+    if (!repeatOn && repeatSameOn) {
         repeatOn = false;
+        repeatSameOn = false;
+        repeat_mix.getElementsByTagName('i')[0].classList = "bi bi-repeat side-button";
         repeat_mix.getElementsByTagName('i')[0].style.color = '';
+    } else if (repeatOn && !repeatSameOn) {
+        repeatOn = false;
+        repeatSameOn = true;
+        repeat_mix.getElementsByTagName('i')[0].classList = "bi bi-repeat-1 side-button";
+        repeat_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
     } else {
         repeatOn = true;
+        repeatSameOn = false;
+        repeat_mix.getElementsByTagName('i')[0].classList = "bi bi-repeat side-button";
         repeat_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
     };
 };
