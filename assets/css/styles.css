@@ -148,10 +148,10 @@ i {
     display: none;
     /* height: 300px; */
     position: absolute;
-    left: 11rem;
+    left: 13rem;
     width: 7rem;
     height: 15rem;
-    top: 1rem;
+    top: 0.4rem;
     object-fit: cover;
 }
 
@@ -174,14 +174,14 @@ i {
 
 @media screen and (min-width: 425px) {
     #arrow-lists {
-        left: 13.5rem;
+        left: 15.5rem;
         top: -1rem;
     }
 }
 
 @media screen and (min-width: 500px) {
     #arrow-lists {
-        left: 15.5rem;
+        left: 18.5rem;
         height: 22rem;
         width: 13rem;
     }
