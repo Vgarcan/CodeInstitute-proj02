@@ -125,6 +125,13 @@ i.side-button {}
     background-color: #ffda37e9;
 }
 
+
+/* lists container */
+
+#lists-display {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     #player {
         width: 55%;

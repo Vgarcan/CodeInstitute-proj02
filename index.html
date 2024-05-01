@@ -23,78 +23,97 @@
             </div>
             <!-- END BANNER SECTION -->
 
-            <!-- INFO SECTION -->
-            <div id="details" class="row py-3 sect-slice">
-                <div id="now-playing-list" class="col-12 mb-2 justify-content-center">
-                    <span id="list-name-display" class="btn">
-                        <img src="assets/imgs/lemon_music.ico" alt="Icon to access the Lists" id="lists-icon">
-                        LIST
-                    </span>
-                </div>
-                <div id="track-picture" class="col-12 col-sm-6">
-                    <img src="assets/imgs/logo-img.png" alt="Track Image" class="sect-slice">
-                </div>
-                <div class="col-12 col-sm-6 align-self-center">
-                    <div class="row">
-                        <div id="track-name" class="col-12 py-2">Track Name</div>
-                        <div id="track-artist" class="col-12">Track Artist</div>
+            <div id="player-display">
+                <!-- INFO SECTION -->
+                <div id="details" class="row py-3 sect-slice">
+                    <div id="now-playing-list" class="col-12 mb-2 justify-content-center">
+                        <span id="list-name-display" class="btn">
+                            <img src="assets/imgs/lemon_music.ico" alt="Icon to access the Lists" id="lists-icon">
+                            LIST
+                        </span>
+                    </div>
+                    <div id="track-picture" class="col-12 col-sm-6">
+                        <img src="assets/imgs/logo-img.png" alt="Track Image" class="sect-slice">
+                    </div>
+                    <div class="col-12 col-sm-6 align-self-center">
+                        <div class="row">
+                            <div id="track-name" class="col-12 py-2">Track Name</div>
+                            <div id="track-artist" class="col-12">Track Artist</div>
+                        </div>
                     </div>
                 </div>
+                <!-- END INFO SECTION -->
+
+                <!-- BUTTONS SECTION -->
+                <div id="buttons" class="row d-flex py-1 sect-slice spread-shadow">
+
+                    <!-- Button #1 - Shuffle -->
+                    <div id="shuffle-mix" class="col-2 align-self-center " onclick="shuffleMix()">
+                        <i class="bi bi-shuffle side-button"></i>
+                    </div>
+
+                    <div id="main-buttons-display" class="col-8 d-flex justify-content-center">
+                        <!-- Button #A - Previous -->
+                        <div id="prev-track" class="px-2 text-end align-self-center" onclick="prevTrack()">
+                            <i class="bi bi-skip-backward-btn-fill"></i>
+                        </div>
+                        <!-- Button #B - Play/Pause -->
+                        <div id="playpause-track" class="px-2 " onclick="playpauseTrack()">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <!-- Button #C - Next -->
+                        <div id="next-track" class="px-2 text-start align-self-center" onclick="nextTrack()">
+                            <i class="bi bi-skip-forward-btn-fill"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- Button #2 - Repeat -->
+                    <div id="repeat-mix" class="col-2 align-self-center " onclick="repeatMix()">
+                        <i class="bi bi-repeat side-button"></i>
+                    </div>
+                </div>
+                <!-- END BUTTONS SECTION -->
+
+                <!-- TRACK SLIDER SECTION -->
+                <div id="slider-container" class="row d-flex py-2 sect-slice">
+                    <div id="current-time" class="col-4">00:00</div>
+                    <input class="col-4 p-0" id="seek-slider" type="range" min="0" max="100" value="0" onchange="seekTo()">
+                    <div id="total-duration" class="col-4">00:00</div>
+                </div>
+                <!-- END TRACK SLIDER SECTION -->
+
+                <!-- VOLUME SECTION-->
+                <div id="volume-container" class="row d-flex sect-slice spread-shadow">
+                    <i class="col-4 bi bi-volume-down-fill text-end" id="vol-down"></i>
+                    <input class="col-4 p-0" id="volume-slider" type="range" min="0" max="100" value="65" onchange="setVolume()">
+                    <i class="col-4 bi bi-volume-up-fill text-start" id="vol-up"></i>
+                </div>
+                <!-- END VOLUME SECTION-->
             </div>
-            <!-- END INFO SECTION -->
 
-            <!-- BUTTONS SECTION -->
-            <div id="buttons" class="row d-flex py-1 sect-slice spread-shadow">
-
-                <!-- Button #1 - Shuffle -->
-                <div id="shuffle-mix" class="col-2 align-self-center " onclick="shuffleMix()">
-                    <i class="bi bi-shuffle side-button"></i>
+            <div id="lists-display" class="">
+                <div class="container">
+                    <div id="lemon-lists" class="row">
+                        <img class="" src="assets/imgs/lemon-stand.png" alt="background image for lists display">
+                        <div id="now-playing-list" class="col-12 mb-2 justify-content-center">
+                            <span id="list-name-display" class="btn">
+                                <img src="assets/imgs/lemon_music.ico" alt="Button to go back to the player" id="lists-icon">
+                                go back
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="main-buttons-display" class="col-8 d-flex justify-content-center">
-                    <!-- Button #A - Previous -->
-                    <div id="prev-track" class="px-2 text-end align-self-center" onclick="prevTrack()">
-                        <i class="bi bi-skip-backward-btn-fill"></i>
-                    </div>
-                    <!-- Button #B - Play/Pause -->
-                    <div id="playpause-track" class="px-2 " onclick="playpauseTrack()">
-                        <i class="bi bi-play-circle-fill"></i>
-                    </div>
-                    <!-- Button #C - Next -->
-                    <div id="next-track" class="px-2 text-start align-self-center" onclick="nextTrack()">
-                        <i class="bi bi-skip-forward-btn-fill"></i>
-                    </div>
-                </div>
-
-
-                <!-- Button #2 - Repeat -->
-                <div id="repeat-mix" class="col-2 align-self-center " onclick="repeatMix()">
-                    <i class="bi bi-repeat side-button"></i>
-                </div>
             </div>
-            <!-- END BUTTONS SECTION -->
-
-            <!-- TRACK SLIDER SECTION -->
-            <div id="slider-container" class="row d-flex py-2 sect-slice">
-                <div id="current-time" class="col-4">00:00</div>
-                <input class="col-4 p-0" id="seek-slider" type="range" min="0" max="100" value="0" onchange="seekTo()">
-                <div id="total-duration" class="col-4">00:00</div>
-            </div>
-            <!-- END TRACK SLIDER SECTION -->
-
-            <!-- VOLUME SECTION-->
-            <div id="volume-container" class="row d-flex sect-slice spread-shadow">
-                <i class="col-4 bi bi-volume-down-fill text-end" id="vol-down"></i>
-                <input class="col-4 p-0" id="volume-slider" type="range" min="0" max="100" value="65" onchange="setVolume()">
-                <i class="col-4 bi bi-volume-up-fill text-start" id="vol-up"></i>
-            </div>
-            <!-- END VOLUME SECTION-->
         </div>
         <!-- End Music Player -->
     </main>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/jq/jq.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
