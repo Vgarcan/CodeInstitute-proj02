@@ -24,32 +24,50 @@ const track_list = {
             "path": "assets/audio/josus/song4.mp3"
         },
     ],
-    'list-B': [{
-            "name": "Track B1",
-            "artist": "Artist B1",
-            "pic": "path/to/trackB1.jpg",
-            "path": "path/to/trackB1.mp3"
+    'JM: Maqueta': [{
+            "name": "Intro",
+            "artist": "Josue Martin",
+            "pic": "assets/audio/maqueta-josu/cover-1.jpeg",
+            "path": "assets/audio/maqueta-josu/intro.mp3"
         },
         {
-            "name": "Track B2",
-            "artist": "Artist B2",
-            "pic": "path/to/trackB2.jpg",
-            "path": "path/to/trackB2.mp3"
-        },
-    ],
-    'list-C': [{
-            "name": "Track C1",
-            "artist": "Artist CC1",
-            "pic": "path/to/trackCC1.jpg",
-            "path": "path/to/trackCC1.mp3"
+            "name": "Project 2",
+            "artist": "Josue Martin",
+            "pic": "assets/audio/maqueta-josu/cover-2.jpeg",
+            "path": "assets/audio/maqueta-josu/proj2.mp3"
         },
         {
-            "name": "Track C2",
-            "artist": "Artist BC2",
-            "pic": "path/to/trackBC2.jpg",
-            "path": "path/to/trackBC2.mp3"
+            "name": "Project 2.2",
+            "artist": "Josue Martin",
+            "pic": "assets/audio/maqueta-josu/cover-3.jpeg",
+            "path": "assets/audio/maqueta-josu/proj2-2.mp3"
+        },
+        {
+            "name": "Project 6",
+            "artist": "Josue Martin",
+            "pic": "assets/audio/maqueta-josu/cover-4.jpeg",
+            "path": "assets/audio/maqueta-josu/proj6.mp3"
+        },
+        {
+            "name": "Project 7",
+            "artist": "Josue Martin",
+            "pic": "assets/audio/maqueta-josu/cover-5.jpeg",
+            "path": "assets/audio/maqueta-josu/proj7.mp3"
         },
     ],
+    // 'list-C': [{
+    //         "name": "Track C1",
+    //         "artist": "Artist CC1",
+    //         "pic": "path/to/trackCC1.jpg",
+    //         "path": "path/to/trackCC1.mp3"
+    //     },
+    //     {
+    //         "name": "Track C2",
+    //         "artist": "Artist BC2",
+    //         "pic": "path/to/trackBC2.jpg",
+    //         "path": "path/to/trackBC2.mp3"
+    //     },
+    // ],
 };
 
 // Create the variables for the display
