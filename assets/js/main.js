@@ -129,7 +129,7 @@ curr_track.volume = volume_slider.value / 100;
 
 // TIME FETCHING
 const time = (new Date()).getHours();
-if (time > 19) {
+if (time >= 19 || time <= 5) {
     document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.png')";
 }
 
@@ -218,9 +218,7 @@ function loadTrack() {
     track_art.querySelector('img').src = track_list[curr_list_selected][track_index]['pic']
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
     track_artist.textContent = track_list[curr_list_selected][track_index]['artist']
-        // --/ Track's Duration display
-
-    // --/ If the ISPLAYING is true continues playing
+        // --/ If the ISPLAYING is true continues playing
     if (isPlaying) play();
 };
 
