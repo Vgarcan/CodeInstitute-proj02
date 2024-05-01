@@ -16,8 +16,6 @@ body {
     color: rgb(237, 244, 250);
 }
 
-#player>div {}
-
 
 /* GLOBALS */
 
@@ -43,12 +41,6 @@ body {
 
 
 /* DETAILS SECTION */
-
-#details {}
-
-#now-playing-list {
-    /* display: flex; */
-}
 
 #lists-icon {
     height: 42px;
@@ -114,8 +106,6 @@ i {
     font-size: 3.2rem;
 }
 
-i.side-button {}
-
 
 /* SLIDER SECTION */
 
@@ -173,6 +163,7 @@ i.side-button {}
 @media screen and (min-width: 425px) {
     #arrow-lists {
         left: 13.5rem;
+        top: -1rem;
     }
 }
 
@@ -203,7 +194,7 @@ i.side-button {}
     }
     #arrow-lists {
         left: 18.5rem;
-        top: 2.5rem
+        top: 1rem
     }
 }
 
