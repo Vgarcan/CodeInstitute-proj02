@@ -142,6 +142,17 @@ i.side-button {}
     left: -4.5rem;
 }
 
+#arrow-lists {
+    display: none;
+    /* height: 300px; */
+    position: absolute;
+    left: 11rem;
+    width: 7rem;
+    height: 15rem;
+    top: 1rem;
+    object-fit: cover;
+}
+
 #lemon-selection {
     position: absolute;
     right: 2.2rem;
@@ -151,22 +162,55 @@ i.side-button {}
 
 /* @MEDIA */
 
+@media screen and (min-width: 375px) {
+    #arrow-lists {
+        left: 13.5rem;
+        height: 19rem;
+        width: 9rem;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    #arrow-lists {
+        left: 13.5rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #arrow-lists {
+        left: 15.5rem;
+        height: 22rem;
+        width: 13rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #player {
         width: 55%;
+    }
+    #arrow-lists {
+        left: 14.5rem;
     }
 }
 
 @media screen and (min-width: 992px) {
     #happy-lemon {
-        display: none;
-        height: 300px;
-        position: absolute;
         left: 1.5rem;
     }
     #lemon-selection {
-        position: absolute;
         right: 5.2rem;
         top: 3.5rem;
+    }
+    #arrow-lists {
+        left: 18.5rem;
+        top: 2.5rem
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #arrow-lists {
+        height: 17rem;
+        width: 9rem;
+        left: 23.5rem;
     }
 }
