@@ -33,10 +33,22 @@ body {
 #banner {
     background-color: #008B27;
     box-shadow: 0 4.2px 5px rgba(216, 236, 219, 0.486);
+    display: none;
 }
 
 #banner>img {
     width: 100%;
+}
+
+
+/* PLAYER CONTAINER */
+
+#player {
+    display: none;
+}
+
+#player-display {
+    display: none;
 }
 
 

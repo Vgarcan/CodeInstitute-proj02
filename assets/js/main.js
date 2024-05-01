@@ -150,7 +150,7 @@ selectedList.addEventListener('change', () => {
 });
 
 /**
- * Sets the volume of the currently playing track.
+ * Sets the volume up for the currently playing track.
  * @function setVolume
  * @returns {void} - No return value.
  * @description This function sets the volume of the audio track to the value of the volume slider.
@@ -162,7 +162,7 @@ volume_up.addEventListener('click', () => {
 });
 
 /**
- * Sets the volume of the currently playing track.
+ * Sets the volume down for the currently playing track.
  * @function setVolume
  * @returns {void} - No return value.
  * @description This function sets the volume of the audio track to the value of the volume slider.
