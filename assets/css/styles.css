@@ -13,7 +13,7 @@ body {
 #player {
     border: 0.34rem solid rgb(216, 236, 219);
     border-radius: 10px;
-    background-color: rgba(12, 15, 1, 0.872);
+    background-color: #0c0f01de;
     color: rgb(237, 244, 250);
 }
 
@@ -52,7 +52,6 @@ body {
 }
 
 #lists-icon {
-    background-image: url('/CodeInstitute-proj02/assets/imgs/lemon_music.ico');
     height: 42px;
 }
 
@@ -132,8 +131,40 @@ i.side-button {}
     display: none;
 }
 
+#lemon-lists {
+    height: 300px;
+    position: relative;
+}
+
+#happy-lemon {
+    display: none;
+    height: 300px;
+    position: absolute;
+    left: -4.5rem;
+}
+
+#lemon-selection {
+    position: absolute;
+    right: 2.2rem;
+    top: 2rem;
+}
+
 @media screen and (min-width: 768px) {
     #player {
         width: 55%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #happy-lemon {
+        display: none;
+        height: 300px;
+        position: absolute;
+        left: 1.5rem;
+    }
+    #lemon-selection {
+        position: absolute;
+        right: 5.2rem;
+        top: 3.5rem;
     }
 }

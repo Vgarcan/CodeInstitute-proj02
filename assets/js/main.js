@@ -53,6 +53,8 @@ const track_list = {
 };
 
 // Create the variables for the display
+// --/Button
+let btn_display_name = document.querySelector("#list-name");
 // --/Details
 let now_playing = document.querySelector("#now-playing-list");
 let track_art = document.querySelector("#track-picture");
@@ -79,27 +81,48 @@ let curr_track = document.createElement('audio');
 // Gets the Lists Names
 let rep_lists_names = Object.keys(track_list);
 let curr_list_selected = rep_lists_names[0];
+btn_display_name.textContent = curr_list_selected;
+
 
 // Create the SELECT element for the player
 let selectedList = document.createElement('select');
 
 // Create the OPTION elements for the player
-rep_lists_names.forEach(
-    /**
-     * Creates an OPTION element for the SELECT element in the player.
-     * @param {string} name - The name of the list to be added to the SELECT element.
-     * @returns {void} - No return value.
-     */
-    function createOption(name) {
-        const option = document.createElement('option'); // Create a new OPTION element
-        option.text = name; // Set the text of the OPTION element to the provided name
-        selectedList.add(option); // Add the newly created OPTION element to the SELECT element
-    });
+rep_lists_names.forEach((name) => {
+    const option = document.createElement('option'); // Create a new OPTION element
+    option.text = name; // Set the text of the OPTION element to the provided name
+    selectedList.add(option); // Add the newly created OPTION element to the SELECT element
+});
+
+// Integrate the Select menu in the list section
+lemonList = document.getElementById('lemon-lists');
+selectedList.classList.add('col-5')
+selectedList.id = 'lemon-selection';
+
+
+lemonList.appendChild(selectedList);
+
+// Globally used values
+let track_index = -1;
+let isPlaying = false;
+let shuffleOn = false;
+let repeatOn = false;
+curr_track.volume = volume_slider.value / 100;
+// let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
 
 // EVENTS LISTENERS //
 // Add an event listener to the select element to update the currently selected list
 selectedList.addEventListener('change', () => {
     curr_list_selected = selectedList.value;
+    track_index = 0;
+    btn_display_name.textContent = curr_list_selected;
+    document.getElementById('exit-btn').click();
+
+    if (isPlaying) {
+        playpauseTrack();
+    }
+
+    loadTrack();
 });
 
 volume_up.addEventListener('click', () => {
@@ -138,13 +161,7 @@ curr_track.addEventListener('ended', () => {
     };
 });
 
-// Globally used values
-let track_index = -1;
-let isPlaying = false;
-let shuffleOn = false;
-let repeatOn = false;
-curr_track.volume = volume_slider.value / 100;
-// let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
+
 
 // --- FUNCTIONALITIES SECTION --- //
 
