@@ -1,7 +1,7 @@
 body {
     padding-top: 15px;
     background-color: rgba(6, 114, 228, 0.532);
-    background-image: url("/CodeInstitute-proj02/assets/imgs/bg-sky.jpg");
+    background-image: url("/CodeInstitute-proj02/assets/imgs/skybg-min.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -125,7 +125,7 @@ i.side-button {}
 }
 
 
-/* lists container */
+/* LIST CONTAINER */
 
 #lists-display {
     display: none;
@@ -148,6 +148,9 @@ i.side-button {}
     right: 2.2rem;
     top: 2rem;
 }
+
+
+/* @MEDIA */
 
 @media screen and (min-width: 768px) {
     #player {

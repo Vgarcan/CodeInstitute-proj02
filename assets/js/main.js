@@ -93,6 +93,7 @@ let volume_slider = document.querySelector("#volume-slider");
 let volume_down = document.querySelector("#vol-down");
 let volume_up = document.querySelector("#vol-up");
 
+// ### AUDIO CREATION AND PLAYLIST FETCH ###
 // Create the AUDIO element for the player
 let curr_track = document.createElement('audio');
 
@@ -100,7 +101,6 @@ let curr_track = document.createElement('audio');
 let rep_lists_names = Object.keys(track_list);
 let curr_list_selected = rep_lists_names[0];
 btn_display_name.textContent = curr_list_selected;
-
 
 // Create the SELECT element for the player
 let selectedList = document.createElement('select');
@@ -114,11 +114,11 @@ rep_lists_names.forEach((name) => {
 
 // Integrate the Select menu in the list section
 lemonList = document.getElementById('lemon-lists');
-selectedList.classList.add('col-5')
+selectedList.classList.add('col-6')
 selectedList.id = 'lemon-selection';
-
-
 lemonList.appendChild(selectedList);
+// ### END OF AUDIO CREATION AND PLAYLIST FETCH ###
+
 
 // Globally used values
 let track_index = -1;
@@ -126,7 +126,12 @@ let isPlaying = false;
 let shuffleOn = false;
 let repeatOn = false;
 curr_track.volume = volume_slider.value / 100;
-// let updateSeekBar = setInterval(updateSeekBarPosition, 1000);
+
+// TIME FETCHING
+const time = (new Date()).getHours();
+if (time > 19) {
+    document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.png')";
+}
 
 // EVENTS LISTENERS //
 // Add an event listener to the select element to update the currently selected list
@@ -143,12 +148,24 @@ selectedList.addEventListener('change', () => {
     loadTrack();
 });
 
+/**
+ * Sets the volume of the currently playing track.
+ * @function setVolume
+ * @returns {void} - No return value.
+ * @description This function sets the volume of the audio track to the value of the volume slider.
+ */
 volume_up.addEventListener('click', () => {
     if (curr_track.volume >= 0.91) curr_track.volume = 1;
     else curr_track.volume = (Math.floor(volume_slider.value) + 10) / 100;
     volume_slider.value = curr_track.volume * 100;
 });
 
+/**
+ * Sets the volume of the currently playing track.
+ * @function setVolume
+ * @returns {void} - No return value.
+ * @description This function sets the volume of the audio track to the value of the volume slider.
+ */
 volume_down.addEventListener('click', () => {
     if (curr_track.volume <= 0.09) curr_track.volume = 0;
     else curr_track.volume = (Math.floor(volume_slider.value) - 10) / 100;
@@ -165,6 +182,12 @@ seek_slider.addEventListener('mouseup', () => {
 });
 //! ####################################
 
+/**
+ * Changes the repeat state of the currently selected list.
+ * @function repeatMix
+ * @returns {void} - No return value
+ * @description If the repeat is already on, it will be turned off and the color of the repeat icon will revert to its default color. If the repeat is off, it will be turned on and the color of the repeat icon will change to turquoise.
+ */
 curr_track.addEventListener('ended', () => {
     if (repeatOn) repeatActualSong();
     else {
@@ -179,11 +202,13 @@ curr_track.addEventListener('ended', () => {
     };
 });
 
-
-
 // --- FUNCTIONALITIES SECTION --- //
 
-// Load a track to Audio-Element
+/**
+ * Loads a track to the audio element.
+ * @function loadTrack
+ * @returns {void} - No return value.
+ */
 function loadTrack() {
     // --/ Reset SEEK TIMER
     displayResetValues();
@@ -400,44 +425,9 @@ function setVolume() {
     curr_track.volume = volume_slider.value / 100;
 };
 
-// Initialize program
+// INITIALIZE PROGRAM
 // --/ starts the list
 nextTrack();
 
 // --/ Updates the current time and total duration of the audio track.
 setInterval(convertTime, 1000);
-
-
-// Extras
-// --/ Shuffle
-// --/ Repeat
-
-// --- TEST EXPORT SECTION --- //
-// Export to JEST Test
-// export default {
-//     // INFO SECTION
-//     now_playing,
-//     track_art,
-//     track_name,
-//     track_artist,
-//     // BUTTONS SECTION
-//     playpause_btn,
-//     next_btn,
-//     prev_btn,
-//     shuffle_mix,
-//     repeat_mix,
-//     // TRACK SLIDER SECTION
-//     seek_slider,
-//     curr_time,
-//     total_duration,
-//     // VOLUME SECTION
-//     volume_slider,
-//     // LIST SECTION
-//     track_index,
-//     isPlaying,
-//     updateTimer,
-//     // PLAYER
-//     curr_track,
-//     //PLAYING LIST
-//     track_list
-// };
