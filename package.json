@@ -1,8 +1,5 @@
 {
   "devDependencies": {
     "jest": "^29.7.0"
-  },
-  "dependencies": {
-    "jquery": "^3.7.1"
   }
 }
