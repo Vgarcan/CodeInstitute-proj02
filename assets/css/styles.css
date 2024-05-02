@@ -14,6 +14,11 @@ body {
     border-radius: 10px;
     background-color: #0c0f01de;
     color: rgb(237, 244, 250);
+    display: none;
+}
+
+#player-display {
+    display: none;
 }
 
 
@@ -38,17 +43,6 @@ body {
 
 #banner>img {
     width: 100%;
-}
-
-
-/* PLAYER CONTAINER */
-
-#player {
-    display: none;
-}
-
-#player-display {
-    display: none;
 }
 
 
@@ -90,6 +84,26 @@ body {
     font-size: 1.22rem;
     color: #11ab3d;
     text-shadow: 2px 3px 5.76px #ffd818e9;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 

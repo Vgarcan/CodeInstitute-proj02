@@ -22,14 +22,20 @@
 - [Colors](#colors)
   - [Color Customization Process](#color-customization-process)
   - [User-Friendly Approach](#user-friendly-approach)
-  - [Future Considerations](#future-considerations)
 - [User Experience](#user-experience)
   - [Key Principles](#key-principles)
   - [User Stories](#user-stories)
   - [Customization and Flexibility](#customization-and-flexibility)
   - [Future Enhancements](#future-enhancements)
 - [Testing](#testing)
-  - [User Stories Testing](#user-stories-testing)
+   - [HTML Validation](#html-validation)
+   - [CSS Validation](#css-validation)
+   - [Accessibility](#accessibility)
+   - [Wave Validation](#wave-validation)
+   - [Lighthouse Validation](#lighthouse-validation)
+   - [Device testing](#device-testing)
+   - [Browser Compatibility](#browser-compatibility)
+   - [User Stories Testing](#user-stories-testing)
 - [Collaborative Efforts](#collaborative-efforts)
 - [Current State and Future Plans](#current-state-and-future-plans)
     - [Current State](#current-state)
@@ -122,7 +128,9 @@ These wireframes helped in determining the placement of elements, navigation flo
 
 ## Colors
 
+<img src="assets/imgs/readme-pics/display-example.png">
 In the "Color Customization Process" section, we describe how we drew inspiration from the freshness of summer and the coolness of a lemon. The color palette reflects this, with lemon-yellow and lime-green hues dominating. Additionally, we carefully selected light blue backgrounds to complement these colors, creating a visually cohesive experience. The transparency of the black sections of the player allows the backgrounds to shine through slightly, adding depth and expanding the visual space. This approach ensures that both the colors and backgrounds work harmoniously to enhance the overall design aesthetics.
+<img src="assets/imgs/readme-pics/buttons-example.png">
 
 ### Color Customization Process
  Looking ahead, while color customization isn't currently a feature, it's a future consideration. We're exploring options to streamline color and image customization using JavaScript, making it easier for users to personalize their experience.
@@ -212,13 +220,57 @@ Below is a conceptual overview of how this feature would work:
 ## Testing
 Comprehensive testing is conducted to ensure the functionality, performance, and compatibility of LimonXemo across different platforms and browsers.
 
-- **HTML Validation:** Ensuring the HTML markup follows best practices and standards.
-- **CSS Validation:** Validating CSS code to eliminate any syntax errors or inconsistencies.
-- **Accessibility:** Ensuring the music player is accessible to users with disabilities, following WCAG guidelines.
-- **Wave Validation:** Conducting accessibility testing using tools like WAVE to identify and address any accessibility issues.
-- **Lighthouse Validation:** Using Lighthouse audits to measure the performance, accessibility, and SEO of the music player.
-- **Device Testing:** Testing LimonXemo on various devices to ensure compatibility and responsiveness.
-- **Browser Compatibility:** Ensuring LimonXemo works seamlessly across different web browsers.
+## HTML Validation
+The HTML code has been validated using the W3C Markup Validation Service ([W3C Validator](https://validator.w3.org/)). This ensures that the HTML adheres to the appropriate standards, enhancing compatibility and minimizing potential issues.
+
+<details><summary><b>INDEX Validation</b></summary>
+   <img src="assets/img/readme-pics/val-index.jpg"></details>
+   <hr>
+
+## CSS Validation
+CSS code has been validated using the W3C CSS Validation Service ([W3C CSS Validator](https://jigsaw.w3.org/css-validator/)). It's important to note that while certain warnings were received, these warnings are related to Bootstrap styles. Our project is designed to avoid potential issues associated with Bootstrap defaults, and these warnings do not impact the functionality or appearance of our specific styles.
+
+<details><summary><b>CSS Validation</b></summary>
+   <img src="assets/img/readme-pics/css-advice.jpg"></details>
+   <hr>
+
+## Accessibility
+Accessibility has been a priority throughout the development process. The project has been tested using various tools and manual checks to ensure it complies with accessibility standards, providing an inclusive experience for users with diverse needs.
+
+## Wave Validation
+
+The Wave Validation has been conducted, revealing zero errors and a few alerts. One of the alerts pertains to the visual presentation, suggesting potential issues with the visibility of headings in pink against a white background. However, user testing has shown no problems with readability or visibility, and we have chosen to disregard this alert. Additionally, a similar issue is observed on the diary page, where the pink date may encounter responsiveness challenges. Despite this, visual inspection and user testing confirm that the content is visible and accessible.
+
+Another point raised in the validation is the similarity of link URLs, where many are relative and deemed similar. Given the ongoing development and redirection to a 404 page, these URLs remain as such for the time being. It's acknowledged that this might affect the Wave Validation but is considered in the context of the evolving project.
+
+## Lighthouse Validation
+
+Lighthouse Validation has played a pivotal role in shaping the development of our project. This invaluable tool has proven to be highly useful throughout the creation process. While we haven't achieved a high score in the PERFORMANCE category, other aspects have excelled, nearly reaching a perfect score. This outcome provides us with valuable insights into areas for improvement, particularly in optimizing image resolutions. Going forward, we aim to enhance the project by addressing the identified performance-related opportunities.
+
+
+Please note that ongoing development may introduce variations that impact specific validations. We appreciate your understanding as we continue to enhance the Dreams Reader Project.
+
+## Device Testing
+The project has undergone testing on various devices, including desktops, laptops, tablets, and smartphones. This ensures responsiveness and functionality across different screen sizes and resolutions.
+
+<details><summary><b>Desktop Testing</b></summary>
+   <img src="assets/imgs/readme-pics/browser-example.png"></details>
+   <hr>
+
+<details><summary><b>Tablet Testing</b></summary>
+   <img src="assets/imgs/readme-pics/tablet-example.png"></details>
+   <hr>
+
+<details><summary><b>Mobile Testing</b></summary>
+   <img src="assets/imgs/readme-pics/phone-test.jpg"></details>
+   <hr>
+
+## Browser Compatibility
+<details><summary><b>Edge,Firefox,Chrome</b></summary>
+   <img src="assets/imgs/readme-pics/multibrowser-example.png">
+   </details>
+   <hr>
+Extensive testing has been conducted on multiple browsers, including but not limited to Chrome, Firefox, Safari, and Microsoft Edge. The project aims for consistent performance and appearance across these popular browsers.
 
 ### User Stories Testing
 
@@ -273,7 +325,6 @@ LimonXemo is currently in its initial development phase, with core functionaliti
 - **Localization:** Adding support for multiple languages to make LimonXemo accessible to a global audience.
 
 ## Deployment
-
 
 ### Deployment Instructions
 
@@ -365,9 +416,10 @@ const track_list_original = {
     ],
     // Other playlists...
 };
-
+```
+```javascript
 // Modified track list after adding a new playlist
-const track_list_modified = {
+const track_list = {
     'JMP Studio': [{
             "name": "West Virginia (Diego - Cover)",
             "artist": "JMP",
@@ -415,7 +467,7 @@ Throughout the development process, various bugs and challenges may arise. These
 
 # Acknowledgement
 
-We extend our gratitude to [Josue Martin]() for providing their music, which greatly contributed to the project. Additionally, we appreciate the wealth of external resources that have supported us throughout this endeavor.
+We extend our gratitude to [Josue Martin](https://www.linkedin.com/in/jmbarragan89) for providing their music, which greatly contributed to the project. Additionally, we appreciate the wealth of external resources that have supported us throughout this endeavor.
 
 Special thanks for his invaluable contribution, without which this project would not have been possible. His need for a reliable music player inspired the inception of this project, allowing us to provide a platform for showcasing his music.
 
