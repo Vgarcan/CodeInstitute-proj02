@@ -77,6 +77,7 @@ let btn_display_name = document.querySelector("#list-name");
 let now_playing = document.querySelector("#now-playing-list");
 let track_art = document.querySelector("#track-picture");
 let track_name = document.querySelector("#track-name");
+let track_name_marquee = document.querySelector("#track-name-marquee");
 let track_artist = document.querySelector("#track-artist");
 // --/Buttons
 let playpause_btn = document.querySelector("#playpause-track");
@@ -224,6 +225,15 @@ function loadTrack() {
     curr_track.src = track_list[curr_list_selected][track_index]['path'];
     // --/ Display Track's details
     track_art.querySelector('img').src = track_list[curr_list_selected][track_index]['pic']
+    if ((track_list[curr_list_selected][track_index]['name']).length < 24) {
+        track_name.classList.remove('d-none');
+        track_name.textContent = track_list[curr_list_selected][track_index]['name']
+        track_name_marquee.classList.add('d-none');
+    } else {
+        track_name_marquee.classList.remove('d-none');
+        track_name_marquee.textContent = track_list[curr_list_selected][track_index]['name'];
+        track_name.classList.add('d-none');
+    }
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
     track_artist.textContent = track_list[curr_list_selected][track_index]['artist']
         // --/ If the ISPLAYING is true continues playing
