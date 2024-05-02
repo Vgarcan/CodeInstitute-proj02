@@ -131,8 +131,8 @@ curr_track.volume = volume_slider.value / 100;
 
 // TIME FETCHING
 const time = (new Date()).getHours();
-if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.png')";
-else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.png')";
+if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.webp')";
+else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.webp')";
 
 
 // EVENTS LISTENERS //
