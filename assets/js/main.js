@@ -115,6 +115,7 @@ rep_lists_names.forEach((name) => {
 // Integrate the Select menu in the list section
 lemonList = document.getElementById('lemon-lists');
 selectedList.classList.add('col-6')
+selectedList.ariaLabel = 'Select Playlist';
 selectedList.id = 'lemon-selection';
 lemonList.appendChild(selectedList);
 // ### END OF AUDIO CREATION AND PLAYLIST FETCH ###
