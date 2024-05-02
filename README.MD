@@ -149,26 +149,50 @@ LimonXemo is designed to deliver a seamless and intuitive user experience, prior
 
 ### User Stories
 
-**Main Client (Website Owner):**
-1. As a website owner, I want an easy-to-integrate music player for my site, to provide my users with a seamless listening experience.
-2. As a website owner, I want a customizable music player, so I can adapt it to the design and style of my website.
-3. As a website owner, I want a music player that can also play podcasts, to offer a variety of multimedia content to my users.
-4. As a website owner, I want a music player with an intuitive and user-friendly interface, to ensure that my users can navigate and enjoy the content without difficulties.
+### First-time User
 
-**Secondary Client (Podcast Listener):**
-1. As a podcast listener, I want a music player that allows me to search and play my favorite podcasts easily, for quick access to my preferred content.
-2. As a podcast listener, I want a music player with a bookmarks or favorites feature, to save episodes that I want to listen to later.
-3. As a podcast listener, I want a music player with adjustable playback speed options, so I can listen to podcasts at my own pace.
-4. As a podcast listener, I want a music player that displays detailed information about each episode, such as duration, description, and release date, so I can make informed decisions about what to listen to.
+**Introduction Clarity:**
 
-**Tertiary Client (General Music User):**
-1. As a general music user, I want a music player with a wide variety of playback controls, such as play, pause, forward, and rewind, for full control over my listening experience.
-2. As a general music user, I want a music player with customizable playlist features, to organize and enjoy my favorite music anytime.
-3. As a general music user, I want a music player that offers song recommendations based on my tastes and preferences, to easily discover new music.
-4. As a general music user, I want a music player with support for displaying song lyrics, so I can follow along with the lyrics of my favorite songs as I listen.
+- **Feature:** Platform Introduction
+- **Action:** Visit the home page and read introductory content
+- **Expected Result:** Clear understanding of the platform's purpose
+- **Actual Result:** Works as expected
 
-These User Stories represent the needs and expectations of different types of users who might be interested in LimonXemo. Let me know if you need any further adjustments!
+---
 
+### Regular User
+
+**Music Playback:**
+
+- **Feature:** Play Music Tracks
+- **Action:** Select and play music tracks from the library
+- **Expected Result:** Seamless playback experience
+- **Actual Result:** Works as expected
+
+**Navigation:**
+
+- **Feature:** Browse Music playlists
+- **Action:** Explore and navigate through different music playlists
+- **Expected Result:** Intuitive navigation experience
+- **Actual Result:** Works as expected
+
+**Accessibility Features:**
+
+- **Feature:** Accessible User Interface
+- **Action:** Ensure accessibility features are functional and easy to use
+- **Expected Result:** User-friendly accessibility options
+- **Actual Result:** Works as expected
+
+---
+
+### Admin/User Management
+
+**Content Management:**
+
+- **Feature:** Manage Music Library
+- **Action:** Add, remove, and organize music tracks in the library
+- **Expected Result:** Easy management of music content
+- **Actual Result:** Works as expected
 ### Customization and Flexibility
 
 While the primary focus of LimonXemo is music playback, the project also aims to accommodate additional functionalities over time. For example, users may have the option to upload and play podcasts in addition to music files. This flexibility allows the player to cater to a broader range of user needs and preferences.
@@ -196,7 +220,7 @@ Comprehensive testing is conducted to ensure the functionality, performance, and
 - **Device Testing:** Testing LimonXemo on various devices to ensure compatibility and responsiveness.
 - **Browser Compatibility:** Ensuring LimonXemo works seamlessly across different web browsers.
 
-# User Stories Testing
+### User Stories Testing
 
 During testing across various devices, the ChemiPlayer app's compatibility and usability have been evaluated based on its existing features and functionalities.
 
@@ -217,9 +241,9 @@ During testing across various devices, the ChemiPlayer app's compatibility and u
 2. **Navigation:**
    | **Feature** | **Action** | **Expected Result** | **Actual Result** |
    |-------------|------------|---------------------|-------------------|
-   | Browse Music Categories | Explore and navigate through different music categories | Intuitive navigation experience | Works as expected |
+   | Browse Music playlists | Explore and navigate through different music playlists | Intuitive navigation experience | Works as expected |
 
-3.. **Accessibility Features:**
+3. **Accessibility Features:**
    | **Feature** | **Action** | **Expected Result** | **Actual Result** |
    |-------------|------------|---------------------|-------------------|
    | Accessible User Interface | Ensure accessibility features are functional and easy to use | User-friendly accessibility options | Works as expected |
@@ -237,7 +261,7 @@ During testing across various devices, the ChemiPlayer app's compatibility and u
 This project has been developed autonomously, without the need for external collaborations. We extend our special thanks to Josué Martín for providing the audio files that served as the foundation for the player's development. Additionally, we acknowledge the valuable contribution of the resources found on the Internet, which were instrumental in advancing this project.
 
 
-## Current State and Future Plans
+### Current State and Future Plans
 
 #### Current State
 LimonXemo is currently in its initial development phase, with core functionalities implemented and undergoing testing.
@@ -249,7 +273,122 @@ LimonXemo is currently in its initial development phase, with core functionaliti
 - **Localization:** Adding support for multiple languages to make LimonXemo accessible to a global audience.
 
 ## Deployment
-LimonXemo will be deployed to a live environment once testing is complete and all necessary optimizations are implemented. Users will be able to access the music player through their web browsers.
+
+
+### Deployment Instructions
+
+To deploy your project using the command line, follow these steps:
+
+1. **Clone the repository:** Open your terminal and navigate to the directory where you want to clone the repository. Then, execute the following command:
+
+   ```bash
+   git clone https://github.com/Vgarcan/CodeInstitute-proj02.git
+   ```
+
+2. **Navigate to the project directory:** Once the repository is cloned, navigate to the project directory using the following command:
+
+   ```bash
+   cd CodeInstitute-proj02
+   ```
+
+3. **Ensure the main branch is up to date:** Before making any changes, ensure you're on the main branch and it's updated with the remote repository:
+
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
+
+4. **Make necessary changes:** If needed, make changes to your project.
+
+5. **Add and commit the changes:** Add the modified files to the staging area and commit the changes using the following commands:
+
+   ```bash
+   git add .
+   git commit -m "Descriptive message of the changes"
+   ```
+
+6. **Push the changes to the remote repository:** Then, push the changes to your remote repository on GitHub:
+
+   ```bash
+   git push origin main
+   ```
+
+7. **Deployment to GitHub Pages:** If you want to deploy your project to GitHub Pages, ensure your repository has a `gh-pages` branch. If it doesn't exist, you can create one by running:
+
+   ```bash
+   git checkout -b gh-pages
+   ```
+
+   Then, you can build and deploy your project to GitHub Pages. Depending on your project, the build steps may vary. In general, you could use a custom build script or simply copy the necessary files to the correct directory.
+
+8. **Verify the deployment:** Once the above steps are completed, visit your GitHub Pages URL to verify that the deployment was successful.
+
+### Usage Instructions
+
+To make changes to the track list in the `main.js` file and use it effectively, follow these steps:
+
+1. **Open `main.js` file:** Navigate to the directory where your project is located and open the `main.js` file in your preferred code editor.
+
+2. **Locate the `track_list` object:** In the `main.js` file, locate the `track_list` object. This object contains the track information organized by playlist name.
+
+3. **Modify the track list:** To add, remove, or modify tracks in the playlist, edit the `track_list` object accordingly. Each playlist is represented as a key-value pair, where the key is the playlist name and the value is an array of track objects.
+
+4. **Add a new playlist:** To add a new playlist, create a new key-value pair in the `track_list` object. The key should be the name of the playlist, and the value should be an array containing track objects with the necessary information (name, artist, pic, path).
+
+5. **Add new tracks to an existing playlist:** To add new tracks to an existing playlist, locate the array corresponding to that playlist in the `track_list` object and append new track objects to the array.
+
+6. **Remove tracks from a playlist:** To remove tracks from a playlist, locate the array corresponding to that playlist in the `track_list` object and remove the track objects you no longer need.
+
+7. **Save the changes:** Once you have made the necessary modifications to the `track_list` object, save the `main.js` file.
+
+8. **Use the updated track list:** After saving the changes, the updated track list will be used the next time you run your project. Ensure that the file paths for the images and audio tracks are correct and that the files are located in the specified directories.
+Unfortunately, I can't directly create or display images or snippets here. However, I can guide you on how to create visual examples using snippets in Markdown:
+
+1. **Create a Before and After Visual Example:** Use two separate code blocks to demonstrate the changes made to the `main.js` file. The first code block will show the original `track_list` object, and the second code block will show the modified `track_list` object.
+
+2. **Add Comments:** Within the code blocks, add comments to indicate the changes made. For example, you can use comments like `// Added new playlist` or `// Removed track C2`.
+
+3. **Use Syntax Highlighting:** Ensure that you use proper syntax highlighting for JavaScript code blocks to improve readability.
+
+Here's an example of how you can structure your file:
+
+```javascript
+// Original track list before modifications
+const track_list_original = {
+    'JMP Studio': [{
+            "name": "West Virginia (Diego - Cover)",
+            "artist": "JMP",
+            "pic": "assets/audio/josus/country-road.png",
+            "path": "assets/audio/josus/song1.mp3"
+        },
+        // Other tracks...
+    ],
+    // Other playlists...
+};
+
+// Modified track list after adding a new playlist
+const track_list_modified = {
+    'JMP Studio': [{
+            "name": "West Virginia (Diego - Cover)",
+            "artist": "JMP",
+            "pic": "assets/audio/josus/country-road.png",
+            "path": "assets/audio/josus/song1.mp3"
+        },
+        // Other tracks...
+    ],
+    'New Playlist': [{
+            "name": "New Track",
+            "artist": "New Artist",
+            "pic": "path/to/new/track.jpg",
+            "path": "path/to/new/track.mp3"
+        },
+        // Other new tracks...
+    ],
+    // Other playlists...
+};
+```
+By following these steps, you can easily make changes to the track list in your project and use it to showcase your music library effectively.
+
 
 ## License
 LimonXemo is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
