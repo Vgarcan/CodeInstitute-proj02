@@ -1,6 +1,44 @@
-**XEMI: Music Player Readme**
+![Main LOGO](assets/imgs/banner-right.png)
 
-### Introduction
+# Victor Garcia Cantalapidera 
+-Slack:[@Victor Garcia](https://code-institute-room.slack.com/team/U0695HZA7FZ)
+
+-GitHub: [Vgarcan](https://github.com/Vgarcan)
+
+-LinkedIn: [Victor Garcia](https://www.linkedin.com/in/vgc89/)
+
+## Check us out!
+
+[LimonXemo - GitHub Pages](https://vgarcan.github.io/CodeInstitute-proj02/) 
+
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+  - [CSS Management for Project Structure](#css-management-for-project-structure)
+- [Colors](#colors)
+  - [Color Customization Process](#color-customization-process)
+  - [User-Friendly Approach](#user-friendly-approach)
+  - [Future Considerations](#future-considerations)
+- [User Experience](#user-experience)
+  - [Key Principles](#key-principles)
+  - [User Stories](#user-stories)
+  - [Customization and Flexibility](#customization-and-flexibility)
+  - [Future Enhancements](#future-enhancements)
+- [Testing](#testing)
+  - [User Stories Testing](#user-stories-testing)
+- [Collaborative Efforts](#collaborative-efforts)
+- [Current State and Future Plans](#current-state-and-future-plans)
+    - [Current State](#current-state)
+    - [Future Plans](#future-plans)
+- [Deployment](#deployment)
+- [License](#license)
+- [Bugs and Challenges](#bugs-and-challenges)
+- [Acknowledgement](#acknowledgement)
+
+## Introduction
 XemiPlayer is a JavaScript-based music player designed to provide a seamless listening experience across devices. It leverages HTML, CSS, and Bootstrap to ensure easy customization for various screen sizes, ensuring a visually appealing and responsive interface. The primary goal is to create a user-friendly music player that is easy to install and operates with minimal issues. Initially, we aim to establish a foundational project that can evolve with additional features in the future. The long-term vision is to simplify the installation process to just importing a JS file and adding an empty div in the HTML, with the JS file automatically generating the necessary HTML and CSS. Technologies such as HTML, CSS, and JavaScript form the core of XemiPlayer, with the potential inclusion of jQuery and exploration of additional APIs. The project structure will consist of files forming the player's pages, including instructional and documentation pages. The first page will serve as an introductory showcase of the player's capabilities.
 
 ## Technologies Used
