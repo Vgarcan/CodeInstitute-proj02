@@ -157,7 +157,7 @@ selectedList.addEventListener('change', () => {
  * @description This function sets the volume of the audio track to the value of the volume slider.
  */
 volume_up.addEventListener('click', () => {
-    if (curr_track.volume >= 0.60) curr_track.volume = 0.65;
+    if (curr_track.volume >= 0.50) curr_track.volume = 0.55;
     else curr_track.volume = (Math.floor(volume_slider.value) + 10) / 100;
     volume_slider.value = curr_track.volume * 100;
 });
