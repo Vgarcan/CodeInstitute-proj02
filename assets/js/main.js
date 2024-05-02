@@ -55,19 +55,19 @@ const track_list = {
             "path": "assets/audio/maqueta-josu/proj7.mp3"
         },
     ],
-    // 'list-C': [{
-    //         "name": "Track C1",
-    //         "artist": "Artist CC1",
-    //         "pic": "path/to/trackCC1.jpg",
-    //         "path": "path/to/trackCC1.mp3"
-    //     },
-    //     {
-    //         "name": "Track C2",
-    //         "artist": "Artist BC2",
-    //         "pic": "path/to/trackBC2.jpg",
-    //         "path": "path/to/trackBC2.mp3"
-    //     },
-    // ],
+    'list-C': [{
+            "name": "Track C1",
+            "artist": "Artist CC1",
+            "pic": "path/to/trackCC1.jpg",
+            "path": "path/to/trackCC1.mp3"
+        },
+        {
+            "name": "Track C2",
+            "artist": "Artist BC2",
+            "pic": "path/to/trackBC2.jpg",
+            "path": "path/to/trackBC2.mp3"
+        },
+    ],
 };
 
 // Create the variables for the display
@@ -184,6 +184,26 @@ seek_slider.addEventListener('mouseup', () => {
     setInterval(updateSeekBarPosition, 1000);
 });
 //! ####################################
+
+/**
+ * Event listener for when an error occurs while loading a track's URL.
+ * @returns {void} - No return value
+ */
+curr_track.addEventListener('error', () => {
+    total_duration = '00:00';
+    alert('Error loading track');
+});
+
+// !######## Not Working ########
+/**
+ * Event listener for when an error occurs while loading a track's picture.
+ * @returns {void} - No return value
+ */
+track_art.addEventListener('error', () => {
+    track_art.src = '/assets/imgs/logo-img.webp';
+    alert('Error loading image for track');
+});
+// !######## Not Working ########
 
 /**
  * Changes the repeat state of the currently selected list.
