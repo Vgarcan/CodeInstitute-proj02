@@ -1,4 +1,4 @@
-![Main LOGO](assets/imgs/banner-right.png)
+![Main LOGO](assets/imgs/banner-right.webp)
 
 # Victor Garcia Cantalapidera 
 -Slack:[@Victor Garcia](https://code-institute-room.slack.com/team/U0695HZA7FZ)
@@ -18,6 +18,7 @@
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
   - [CSS Management for Project Structure](#css-management-for-project-structure)
+- [Wireframes](#wireframes)
 - [Colors](#colors)
   - [Color Customization Process](#color-customization-process)
   - [User-Friendly Approach](#user-friendly-approach)
@@ -39,77 +40,112 @@
 - [Acknowledgement](#acknowledgement)
 
 ## Introduction
-XemiPlayer is a JavaScript-based music player designed to provide a seamless listening experience across devices. It leverages HTML, CSS, and Bootstrap to ensure easy customization for various screen sizes, ensuring a visually appealing and responsive interface. The primary goal is to create a user-friendly music player that is easy to install and operates with minimal issues. Initially, we aim to establish a foundational project that can evolve with additional features in the future. The long-term vision is to simplify the installation process to just importing a JS file and adding an empty div in the HTML, with the JS file automatically generating the necessary HTML and CSS. Technologies such as HTML, CSS, and JavaScript form the core of XemiPlayer, with the potential inclusion of jQuery and exploration of additional APIs. The project structure will consist of files forming the player's pages, including instructional and documentation pages. The first page will serve as an introductory showcase of the player's capabilities.
+
+Xemusic is a personal project initiated by the need to address the musical showcasing requirements of a friend. This endeavor sparked an exploration into the realm of Audio Software Development, leading to the inception of the Xemusic project. Within this project, Limonxemo stands as the flagship application, serving as a testament to the research and development efforts in this field.
+
+Driven by the desire to delve into audio software development, Xemusic aims to provide a platform for experimentation and learning. Limonxemo, the primary outcome of this endeavor, represents a starting point in this journey. It is a versatile music player application designed not only for music playback but also for podcast streaming, showcasing its adaptability and multifunctionality.
+
+With Limonxemo, users can enjoy seamless audio playback experiences, whether they are listening to their favorite tracks or engaging with compelling podcast content. The project aspires to transcend beyond traditional music players by offering support for various audio formats and catering to the diverse needs of creators and listeners alike.
 
 ## Technologies Used
 
-XemiPlayer is built using a combination of technologies to ensure a robust and versatile music player experience. The primary technologies utilized include:
+Limonxemo has been developed using the following technologies:
 
-- **HTML:** Provides the structure and markup for the player interface, facilitating easy customization and accessibility.
-- **CSS:** Enables styling and layout adjustments to create a visually appealing and responsive design across different devices and screen sizes.
-- **JavaScript:** Powers the core functionality of XemiPlayer, including music playback controls, user interactions, and dynamic content generation.
-- **Bootstrap:** Utilized for its grid system, components, and utilities, Bootstrap enhances the responsiveness and layout consistency of the player across various devices.
+- <img src="assets/imgs/readme-pics/html_icon.ico" width="18px"> **HTML:** Utilized for creating the structure of the application's web pages. Limonxemo employs an HTML audio element to handle music playback, with interactions managed through additional HTML elements.
+- <img src="assets/imgs/readme-pics/css-icon.ico" width="18px"> **CSS:** Employed to style and customize the appearance of the application, ensuring a visually appealing user interface.
+- <img src="assets/imgs/readme-pics/js-icon.ico" width="18px"> **JavaScript:** Utilized for implementing interactive features and functionalities, including DOM manipulation and event handling tasks.
+- <img src="assets/imgs/readme-pics/bootstrap-icon.ico" width="18px"> **Bootstrap:** Integrated to leverage its responsive design components and utilities, ensuring compatibility with various devices and screen sizes.
+- <img src="assets/imgs/readme-pics/jquery-icon.ico" width="18px"> **jQuery:** Solely used for animations within the application, enhancing the visual experience for users.
 
-Additionally, the project may incorporate:
+These technologies have been carefully chosen to ensure a robust and user-friendly music player application, with JavaScript primarily responsible for DOM manipulation and interaction handling.
 
-- **jQuery:** A fast, small, and feature-rich JavaScript library that simplifies DOM manipulation and event handling, potentially enhancing the player's functionality and development efficiency.
-- **Additional APIs:** Exploration of external APIs may provide opportunities to integrate additional features or enhance existing functionality, although no specific APIs are currently planned for inclusion.
-
-Together, these technologies form the foundation of XemiPlayer, ensuring a smooth and enjoyable music listening experience for users across different platforms and devices.
 
 ## Project Structure
 
-The project directory is organized as follows:
+- <img src="assets/imgs/readme-pics/red-folder-icon.ico" width="18px"> Root Directory
+    - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> assets (Contains project assets)
+        - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px">audio (Contains audio files)
+            - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px">Music Folder 1 (Contains music files and related images)
+                - <img src="assets/imgs/readme-pics/filetype-mp3-icon.ico" width="18px"> song1.mp3
+                - <img src="assets/imgs/readme-pics/filetype-mp3-icon.ico" width="18px"> song2.mp3
+                - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> related_image1.jpg
+                - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> related_image2.png
+                - ...
+            - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> Music Folder 2 (Contains music files and related images)
+                - <img src="assets/imgs/readme-pics/filetype-mp3-icon.ico" width="18px"> song3.mp3
+                - <img src="assets/imgs/readme-pics/filetype-mp3-icon.ico" width="18px"> song4.mp3
+                - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> related_image3.jpg
+                - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> related_image4.png
+                - ...
+        - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> css (Contains CSS stylesheets)
+            - <img src="assets/imgs/readme-pics/css-filetype-icon.ico" width="18px"> styles.css
+        - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> imgs (Contains images)
+            - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> readme-pics (Contains images)
+              - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> image1.jpg
+              - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> image2.png
+              - ...
+            - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> image1.jpg
+            - <img src="assets/imgs/readme-pics/image-con.ico" width="18px"> image2.png
+            - ...
+        - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> js (Contains JavaScript files)
+            - <img src="assets/imgs/readme-pics/js-filetype-icon.ico" width="18px"> main.js
+            - <img src="assets/imgs/readme-pics/folder-icon.ico" width="18px"> jq (jQuery folder)
+                - <img src="assets/imgs/readme-pics/js-filetype-icon.ico" width="18px"> jq.js
+    - <img src="assets/imgs/readme-pics/git-icon.ico" width="18px"> .gitignore
+    - <img src="assets/imgs/lemon_music.ico" width="18px"> favicon.ico (Project favicon)
+    - <img src="assets/imgs/readme-pics/html-filetype-icon.ico" width="18px"> index.html (Main HTML file)
+    - <img src="assets/imgs/readme-pics/ic-info-outline.ico" width="18px"> README.md (Project README)
 
-- **index.html:** The main HTML file serving as the entry point to the music player.
-- **css:** Directory containing CSS files for styling the player interface.
-  - *styles.css:* Main CSS file for general styling.
-  - *bootstrap.css:* Bootstrap CSS file for layout and component styling.
-- **js:** Directory containing JavaScript files for the player functionality.
-  - *app.js:* Main JavaScript file containing the core functionality of the music player.
-  - *jquery.js:* (optional) jQuery library file, if utilized in the project.
-- **img:** Directory for storing images and icons used in the player interface.
-- **docs:** Directory containing documentation files for the project.
-  - *usage.md:* Instructions on how to install and use XemiPlayer.
-  - *documentation.md:* Detailed documentation of the player's features and functionalities.
-- **mockups:** Directory containing mockups or wireframes for future enhancements.
-- **LICENSE:** The license file specifying the terms of use for the project.
-- **README.md:** The README file providing an overview of the project and its components.
+The project structure is organized in this way to maintain a clear and coherent organization of all files and resources used in the project development. The 'assets' folder is used to store all project resources, such as audio files, CSS stylesheets, and images. Within the 'audio' folder, subfolders have been created to organize music files and images related to each song. Similarly, the 'css' folder contains CSS files used to style the project interface, while the 'imgs' folder hosts images used in the project. The 'js' folder contains JavaScript files, including the main script 'main.js' and the jQuery script in the 'jq' subfolder. This structure provides an orderly and easy way to access all project resources, facilitating project development and maintenance.
 
 
 ### CSS Management for Project Structure
-CSS is organized using a modular approach, with separate files for different components and stylesheets. This ensures maintainability and scalability of the styling code.
+In this project, we've opted to use only one CSS stylesheet. Since the project is not very large and doesn't require extensive styling, using a single stylesheet helps keep everything centralized and straightforward. This approach simplifies the management of styles and ensures consistency throughout the project
+
+## Wireframes
+
+For the design and layout of the project, wireframes were created to provide a visual representation of the main pages. These wireframes were instrumental in planning the structure and functionality of the application.
+
+### Desktop Wireframe
+
+<details><summary><b>Desktop Wireframe</b></summary>
+   <img src="assets/imgs/"></details>
+   <hr>
+
+### Mobile Wireframe
+
+<details><summary><b>Mobile Wireframe</b></summary>
+   <img src="assets/img/mobile_wireframe.png"></details>
+   <hr>
+
+These wireframes helped in determining the placement of elements, navigation flow, and overall user experience across different devices.
 
 ## Colors
 
-XemiPlayer aims to provide users with the ability to customize the colors of the player interface according to their preferences. This customization feature will be implemented using JavaScript, allowing users to easily modify the colors to suit their needs.
+In the "Color Customization Process" section, we describe how we drew inspiration from the freshness of summer and the coolness of a lemon. The color palette reflects this, with lemon-yellow and lime-green hues dominating. Additionally, we carefully selected light blue backgrounds to complement these colors, creating a visually cohesive experience. The transparency of the black sections of the player allows the backgrounds to shine through slightly, adding depth and expanding the visual space. This approach ensures that both the colors and backgrounds work harmoniously to enhance the overall design aesthetics.
 
 ### Color Customization Process
-
-Users can modify the colors of various elements within the player interface by editing a separate JavaScript file. This file will contain predefined variables for different elements, making it simple for users to locate and adjust the desired colors without extensive searching.
-
-For example, users can change the color of the player background, text, buttons, and other interface elements by modifying the corresponding variables in the JavaScript file. Comments within the file will provide guidance on which sections correspond to specific interface elements, such as banners or icons, facilitating the customization process.
-
-### User-Friendly Approach
-
-By centralizing color customization in a separate JavaScript file and providing clear instructions and comments, XemiPlayer aims to make it effortless for users to tailor the player to their preferences. This user-friendly approach ensures that users can easily adjust colors without the need for extensive technical knowledge or coding expertise.
+ Looking ahead, while color customization isn't currently a feature, it's a future consideration. We're exploring options to streamline color and image customization using JavaScript, making it easier for users to personalize their experience.
 
 ### Future Considerations
 
-In future iterations of the project, additional customization options may be explored, such as icon styles, themes, or advanced color palettes. The goal is to continually enhance the customization capabilities of XemiPlayer to provide users with a personalized and enjoyable music listening experience.
+In future iterations of the project, additional customization options may be explored, such as icon styles, themes, or advanced color palettes. The goal is to continually enhance the customization capabilities of LimonXemo to provide users with a personalized and enjoyable music listening experience.
+#### User-Friendly Approach
+
+By centralizing color customization in a separate JavaScript file and providing clear instructions and comments, LimonXemo aims to make it effortless for users to tailor the player to their preferences. This user-friendly approach ensures that users can easily adjust colors without the need for extensive technical knowledge or coding expertise.
 
 
 ## User Experience
 
-XemiPlayer is designed to deliver a seamless and intuitive user experience, prioritizing simplicity and ease of use. The project aims to minimize installation requirements and eliminate unnecessary complexity, ensuring that users can effortlessly integrate the player into their websites or platforms.
+LimonXemo is designed to deliver a seamless and intuitive user experience, prioritizing simplicity and ease of use. The project aims to minimize installation requirements and eliminate unnecessary complexity, ensuring that users can effortlessly integrate the player into their websites or platforms.
 
 ### Key Principles
 
-- **Simplicity:** XemiPlayer features a clean and straightforward interface, free from clutter and unnecessary buttons or elements. This simplicity reduces cognitive load and prevents users from feeling overwhelmed.
+- **Simplicity:** LimonXemo features a clean and straightforward interface, free from clutter and unnecessary buttons or elements. This simplicity reduces cognitive load and prevents users from feeling overwhelmed.
   
 - **Ease of Use:** The player is designed to be incredibly user-friendly, requiring minimal setup and configuration. Users can quickly understand and navigate the interface without the need for extensive tutorials or documentation.
   
-- **Accessibility:** Accessibility considerations are paramount in ensuring that XemiPlayer is usable by all individuals, regardless of their abilities or technical proficiency. The player adheres to best practices for web accessibility, making it accessible to a wide range of users.
+- **Accessibility:** Accessibility considerations are paramount in ensuring that LimonXemo is usable by all individuals, regardless of their abilities or technical proficiency. The player adheres to best practices for web accessibility, making it accessible to a wide range of users.
 
 ### User Stories
 
@@ -131,50 +167,92 @@ XemiPlayer is designed to deliver a seamless and intuitive user experience, prio
 3. As a general music user, I want a music player that offers song recommendations based on my tastes and preferences, to easily discover new music.
 4. As a general music user, I want a music player with support for displaying song lyrics, so I can follow along with the lyrics of my favorite songs as I listen.
 
-These User Stories represent the needs and expectations of different types of users who might be interested in XemiPlayer. Let me know if you need any further adjustments!
+These User Stories represent the needs and expectations of different types of users who might be interested in LimonXemo. Let me know if you need any further adjustments!
 
 ### Customization and Flexibility
 
-While the primary focus of XemiPlayer is music playback, the project also aims to accommodate additional functionalities over time. For example, users may have the option to upload and play podcasts in addition to music files. This flexibility allows the player to cater to a broader range of user needs and preferences.
+While the primary focus of LimonXemo is music playback, the project also aims to accommodate additional functionalities over time. For example, users may have the option to upload and play podcasts in addition to music files. This flexibility allows the player to cater to a broader range of user needs and preferences.
 
 ### Future Enhancements
 
-Continual improvements and updates to XemiPlayer will further enhance the user experience, introducing new features and refinements based on user feedback and emerging technologies. The project will remain committed to its core principles of simplicity, ease of use, and accessibility, ensuring that users always have a delightful and hassle-free music listening experience.
+One of the initial goals of the project was to automatically recognize and load saved playlists within the application. However, due to technical complexities and security considerations, this feature is currently on hold. We aim to simplify the user experience by automatically capturing and loading playlists without requiring manual manipulation of JavaScript objects. While this functionality is not yet implemented, it remains a priority for future development.
 
+Below is a conceptual overview of how this feature would work:
+
+<details>
+  <summary><b>Conceptual Overview</b></summary>
+  <img src="assets/img/future-enhancements-concept.jpg">
+</details>
+<hr>
 
 ## Testing
-Comprehensive testing is conducted to ensure the functionality, performance, and compatibility of XEMI across different platforms and browsers.
+Comprehensive testing is conducted to ensure the functionality, performance, and compatibility of LimonXemo across different platforms and browsers.
 
 - **HTML Validation:** Ensuring the HTML markup follows best practices and standards.
 - **CSS Validation:** Validating CSS code to eliminate any syntax errors or inconsistencies.
 - **Accessibility:** Ensuring the music player is accessible to users with disabilities, following WCAG guidelines.
 - **Wave Validation:** Conducting accessibility testing using tools like WAVE to identify and address any accessibility issues.
 - **Lighthouse Validation:** Using Lighthouse audits to measure the performance, accessibility, and SEO of the music player.
-- **Device Testing:** Testing XEMI on various devices to ensure compatibility and responsiveness.
-- **Browser Compatibility:** Ensuring XEMI works seamlessly across different web browsers.
+- **Device Testing:** Testing LimonXemo on various devices to ensure compatibility and responsiveness.
+- **Browser Compatibility:** Ensuring LimonXemo works seamlessly across different web browsers.
 
-### User Stories Testing
-Testing is conducted based on user stories to ensure that XEMI meets the needs and expectations of its users. Feedback is collected and incorporated into the development process to continuously improve the music player.
+# User Stories Testing
+
+During testing across various devices, the ChemiPlayer app's compatibility and usability have been evaluated based on its existing features and functionalities.
+
+**First-time User**
+
+1. **Introduction Clarity:**
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Platform Introduction | Visit the home page and read introductory content | Clear understanding of the platform's purpose | Works as expected |
+
+**Regular User**
+
+1. **Music Playback:**
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Play Music Tracks | Select and play music tracks from the library | Seamless playback experience | Works as expected |
+
+2. **Navigation:**
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Browse Music Categories | Explore and navigate through different music categories | Intuitive navigation experience | Works as expected |
+
+3.. **Accessibility Features:**
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Accessible User Interface | Ensure accessibility features are functional and easy to use | User-friendly accessibility options | Works as expected |
+
+**Admin/User Management**
+
+1. **Content Management:**
+   | **Feature** | **Action** | **Expected Result** | **Actual Result** |
+   |-------------|------------|---------------------|-------------------|
+   | Manage Music Library | Add, remove, and organize music tracks in the library | Eassy management of music content | Works as expected |
+
 
 ## Collaborative Efforts
-XEMI is the result of collaborative efforts from a dedicated team of developers, designers, and testers. Regular communication and coordination ensure smooth progress and successful delivery of the project.
+
+This project has been developed autonomously, without the need for external collaborations. We extend our special thanks to Josué Martín for providing the audio files that served as the foundation for the player's development. Additionally, we acknowledge the valuable contribution of the resources found on the Internet, which were instrumental in advancing this project.
+
 
 ## Current State and Future Plans
 
 #### Current State
-XEMI is currently in its initial development phase, with core functionalities implemented and undergoing testing.
+LimonXemo is currently in its initial development phase, with core functionalities implemented and undergoing testing.
 
 #### Future Plans
 - **Enhanced Features:** Continuously adding new features and enhancements based on user feedback and emerging technologies.
-- **Performance Optimization:** Optimizing the performance of XEMI for faster loading times and smoother operation.
+- **Performance Optimization:** Optimizing the performance of LimonXemo for faster loading times and smoother operation.
 - **Integration:** Exploring integration with third-party services and platforms to enrich the music listening experience.
-- **Localization:** Adding support for multiple languages to make XEMI accessible to a global audience.
+- **Localization:** Adding support for multiple languages to make LimonXemo accessible to a global audience.
 
 ## Deployment
-XEMI will be deployed to a live environment once testing is complete and all necessary optimizations are implemented. Users will be able to access the music player through their web browsers.
+LimonXemo will be deployed to a live environment once testing is complete and all necessary optimizations are implemented. Users will be able to access the music player through their web browsers.
 
 ## License
-XemiPlayer is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+LimonXemo is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 You are free to:
 
@@ -194,11 +272,15 @@ For more information about the Creative Commons Attribution-NonCommercial-ShareA
 .
 
 ## Bugs and Challenges
-Throughout the development process, various bugs and challenges may arise. These are diligently addressed and resolved to ensure the stability and reliability of XEMI.
+Throughout the development process, various bugs and challenges may arise. These are diligently addressed and resolved to ensure the stability and reliability of LimonXemo.
 
-## Acknowledgement
+# Acknowledgement
 
-XemiPlayer has been inspired and developed with reference to various resources available online. In particular, we would like to acknowledge and express our gratitude to the post by [GEEKFORGEEKS.ORG](https://www.geeksforgeeks.org/) that provided valuable insights and guidance on creating a music player.
+We extend our gratitude to [Josue Martin]() for providing their music, which greatly contributed to the project. Additionally, we appreciate the wealth of external resources that have supported us throughout this endeavor.
+
+Special thanks for his invaluable contribution, without which this project would not have been possible. His need for a reliable music player inspired the inception of this project, allowing us to provide a platform for showcasing his music.
+
+LimonXemo has been inspired and developed with reference to various resources available online. In particular, we would like to acknowledge and express our gratitude to the post by [GEEKFORGEEKS.ORG](https://www.geeksforgeeks.org/) that provided valuable insights and guidance on creating a music player.
 
 The post, which can be accessed [here](https://www.geeksforgeeks.org/create-a-music-player-using-javascript/), served as a helpful reference during the development process, providing useful tips and techniques for building a functional music player. While we have not directly copied the content, we have drawn inspiration from the ideas and methodologies presented in the post to enhance our project.
 
