@@ -115,22 +115,25 @@ For the design and layout of the project, wireframes were created to provide a v
 ### Desktop Wireframe
 
 <details><summary><b>Desktop Wireframe</b></summary>
-   <img src="assets/imgs/"></details>
+   <img src="assets/imgs/readme-pics/wf-web.png"></details>
    <hr>
 
-### Mobile Wireframe
+### Mobile / Tablet Wireframe
 
 <details><summary><b>Mobile Wireframe</b></summary>
-   <img src="assets/img/mobile_wireframe.png"></details>
+   <img src="assets/imgs/readme-pics/wf-phone.png"></details>
    <hr>
 
 These wireframes helped in determining the placement of elements, navigation flow, and overall user experience across different devices.
 
 ## Colors
+<img src="assets/imgs/readme-pics/buttons-example.png">
+
+In the "Color Customization Process" section, we describe how we drew inspiration from the freshness of summer and the coolness of a lemon. The color palette reflects this, with lemon-yellow and lime-green hues dominating.
+
+Additionally, we carefully selected light blue backgrounds to complement these colors, creating a visually cohesive experience. The transparency of the black sections of the player allows the backgrounds to shine through slightly, adding depth and expanding the visual space. This approach ensures that both the colors and backgrounds work harmoniously to enhance the overall design aesthetics.
 
 <img src="assets/imgs/readme-pics/display-example.png">
-In the "Color Customization Process" section, we describe how we drew inspiration from the freshness of summer and the coolness of a lemon. The color palette reflects this, with lemon-yellow and lime-green hues dominating. Additionally, we carefully selected light blue backgrounds to complement these colors, creating a visually cohesive experience. The transparency of the black sections of the player allows the backgrounds to shine through slightly, adding depth and expanding the visual space. This approach ensures that both the colors and backgrounds work harmoniously to enhance the overall design aesthetics.
-<img src="assets/imgs/readme-pics/buttons-example.png">
 
 ### Color Customization Process
  Looking ahead, while color customization isn't currently a feature, it's a future consideration. We're exploring options to streamline color and image customization using JavaScript, making it easier for users to personalize their experience.
@@ -141,7 +144,6 @@ In future iterations of the project, additional customization options may be exp
 #### User-Friendly Approach
 
 By centralizing color customization in a separate JavaScript file and providing clear instructions and comments, LimonXemo aims to make it effortless for users to tailor the player to their preferences. This user-friendly approach ensures that users can easily adjust colors without the need for extensive technical knowledge or coding expertise.
-
 
 ## User Experience
 
@@ -155,16 +157,13 @@ LimonXemo is designed to deliver a seamless and intuitive user experience, prior
   
 - **Accessibility:** Accessibility considerations are paramount in ensuring that LimonXemo is usable by all individuals, regardless of their abilities or technical proficiency. The player adheres to best practices for web accessibility, making it accessible to a wide range of users.
 
-### User Stories
+## User Stories
 
 ### First-time User
 
 **Introduction Clarity:**
 
-- **Feature:** Platform Introduction
-- **Action:** Visit the home page and read introductory content
-- **Expected Result:** Clear understanding of the platform's purpose
-- **Actual Result:** Works as expected
+- As a first-time user, I want to be able to visit the home page and read introductory content so that I can have a clear understanding of the platform's purpose.
 
 ---
 
@@ -172,24 +171,15 @@ LimonXemo is designed to deliver a seamless and intuitive user experience, prior
 
 **Music Playback:**
 
-- **Feature:** Play Music Tracks
-- **Action:** Select and play music tracks from the library
-- **Expected Result:** Seamless playback experience
-- **Actual Result:** Works as expected
+- As a regular user, I want to play music tracks from the library so that I can have a seamless playback experience.
 
 **Navigation:**
 
-- **Feature:** Browse Music playlists
-- **Action:** Explore and navigate through different music playlists
-- **Expected Result:** Intuitive navigation experience
-- **Actual Result:** Works as expected
+- As a regular user, I want to browse music playlists to explore and navigate through different music options, ensuring an intuitive navigation experience.
 
 **Accessibility Features:**
 
-- **Feature:** Accessible User Interface
-- **Action:** Ensure accessibility features are functional and easy to use
-- **Expected Result:** User-friendly accessibility options
-- **Actual Result:** Works as expected
+- As a regular user, I want the user interface to be accessible, ensuring that accessibility features are functional and easy to use for a user-friendly experience.
 
 ---
 
@@ -197,13 +187,12 @@ LimonXemo is designed to deliver a seamless and intuitive user experience, prior
 
 **Content Management:**
 
-- **Feature:** Manage Music Library
-- **Action:** Add, remove, and organize music tracks in the library
-- **Expected Result:** Easy management of music content
-- **Actual Result:** Works as expected
+- As an admin/user, I want to manage the music library by being able to add, remove, and organize music tracks easily, ensuring easy management of music content
+
 ### Customization and Flexibility
 
 While the primary focus of LimonXemo is music playback, the project also aims to accommodate additional functionalities over time. For example, users may have the option to upload and play podcasts in addition to music files. This flexibility allows the player to cater to a broader range of user needs and preferences.
+
 
 ### Future Enhancements
 
@@ -213,7 +202,7 @@ Below is a conceptual overview of how this feature would work:
 
 <details>
   <summary><b>Conceptual Overview</b></summary>
-  <img src="assets/img/future-enhancements-concept.jpg">
+  <img src="assets/imgs/readme-pics/flow-future-impl.png">
 </details>
 <hr>
 
@@ -313,7 +302,7 @@ During testing across various devices, the ChemiPlayer app's compatibility and u
 This project has been developed autonomously, without the need for external collaborations. We extend our special thanks to Josué Martín for providing the audio files that served as the foundation for the player's development. Additionally, we acknowledge the valuable contribution of the resources found on the Internet, which were instrumental in advancing this project.
 
 
-### Current State and Future Plans
+## Current State and Future Plans
 
 #### Current State
 LimonXemo is currently in its initial development phase, with core functionalities implemented and undergoing testing.
@@ -444,6 +433,8 @@ By following these steps, you can easily make changes to the track list in your 
 
 ## License
 LimonXemo is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+<img src="assets/imgs/readme-pics/license.jpg">
 
 You are free to:
 
