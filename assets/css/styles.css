@@ -73,8 +73,7 @@ body {
     box-shadow: 1.4px 2.2px 5px rgba(19, 211, 19, 0.954);
 }
 
-#track-name,
-#track-name-marquee {
+#track-name {
     font-size: 1.42rem;
     color: #ffd518e9;
     text-shadow: 3px 2.4px 4.4px #73E60C;

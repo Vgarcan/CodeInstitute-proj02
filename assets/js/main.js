@@ -128,6 +128,7 @@ let shuffleOn = false;
 let repeatOn = false;
 let repeatSameOn = false;
 curr_track.volume = volume_slider.value / 100;
+let playedTracks = [];
 
 // TIME FETCHING
 const time = (new Date()).getHours();
@@ -185,27 +186,6 @@ seek_slider.addEventListener('mouseup', () => {
 //! ####################################
 
 /**
- * Event listener for when an error occurs while loading a track's URL.
- * @returns {void} - No return value
- */
-curr_track.addEventListener('error', () => {
-    alert('Error loading track');
-});
-
-// total_duration.addEventListener('change', () => {
-//     if (total_duration.textContent === 'NaN:NaN') total_duration.textContent = 'LOADING';
-// });
-
-/**
- * Event listener for when an error occurs while loading a track's picture.
- * @returns {void} - No return value
- */
-track_art.addEventListener('error', () => {
-    track_art.src = 'assets/imgs/logo-img.webp';
-    alert('Error loading image for track');
-});
-
-/**
  * Changes the repeat state of the currently selected list.
  * @function repeatMix
  * @returns {void} - No return value
@@ -241,19 +221,35 @@ curr_track.addEventListener('ended', () => {
 function loadTrack() {
     // --/ Reset SEEK TIMER
     displayResetValues();
-    // --/ Load new Track
-    curr_track.src = track_list[curr_list_selected][track_index]['path'];
-    // --/ Display Track's details
-    track_art.src = track_list[curr_list_selected][track_index]['pic'];
-    // --/ Display and checks lenght for TRACK_NAME
+    // Display Track's details
+    // --/ Load new Track URL
+    let new_track_url = track_list[curr_list_selected][track_index]['path'];
+    fetch(new_track_url)
+        .then(response => {
+            if (response.statusText === 'OK') curr_track.src = track_list[curr_list_selected][track_index]['path'];
+            else alert('URL for this track is unavailable:\n' + new_track_url + '\n' + response.statusText);
+        })
+        .catch(error => console.log('Error with URL for the track:\n', error));
+
+    // --/ Load new Track PIC
+    let new_track_pic = track_list[curr_list_selected][track_index]['pic'];
+    console.log(new_track_pic);
+    fetch(new_track_pic)
+        .then(response => {
+            if (response.statusText === 'OK') track_art.src = track_list[curr_list_selected][track_index]['pic'];
+            else alert('PIC for this track is unavailable:\n' + new_track_pic + '\n' + response.statusText);
+        })
+        .catch(error => console.log('Error with PIC for the track:\n', error));
+
+    // --/ Display and checks length for TRACK_NAME
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
     if (track_name.textContent.length < 22) track_name.classList.remove('mtext');
     else track_name.classList.add('mtext');
-    // --/ Display and checks lenght for TRACK_ARTIST
+    // --/ Display and checks length for TRACK_ARTIST
     track_artist.textContent = track_list[curr_list_selected][track_index]['artist'];
     if (track_artist.textContent.length < 22) track_artist.classList.remove('mtext');
     else track_artist.classList.add('mtext');
-    // --/ If the ISPLAYING is true continues playing
+    // --/ If the ISPLAYING is TRUE continues playing
     if (isPlaying) play();
 };
 
