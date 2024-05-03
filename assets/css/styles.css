@@ -55,7 +55,7 @@ body {
 .btn {
     background-color: #ffd818e9;
     text-shadow: 3px 2.4px 4.4px #73E60C;
-    box-shadow: 3px 2.4px 4.4px #73E60C;
+    box-shadow: 5px 3.7px 4.4px #73E60C;
     border-radius: 30rem 40rem 0 40rem;
 }
 
@@ -88,13 +88,13 @@ body {
 
 .marquee {
     width: 100%;
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
 }
 
-.marquee p {
+.marquee .mtext {
     display: inline-block;
-    animation: marquee 5s linear infinite;
+    animation: marquee 8s linear infinite;
 }
 
 @keyframes marquee {
