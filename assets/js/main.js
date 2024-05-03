@@ -55,17 +55,17 @@ const track_list = {
             "path": "assets/audio/maqueta-josu/proj7.mp3"
         },
     ],
-    'list-C': [{
-            "name": "Track C1",
-            "artist": "Artist CC1",
-            "pic": "path/to/trackCC1.jpg",
+    '**ERROR DISPLAY LIST**': [{
+            "name": "Track with no audio",
+            "artist": "**NO AUDIO**",
+            "pic": "assets/imgs/lemon_music.webp",
             "path": "path/to/trackCC1.mp3"
         },
         {
-            "name": "Track C2",
-            "artist": "Artist BC2",
+            "name": "Track with no picture",
+            "artist": "**NO PICTURE**",
             "pic": "path/to/trackBC2.jpg",
-            "path": "path/to/trackBC2.mp3"
+            "path": "assets/audio/josus/song4.mp3"
         },
     ],
 };
@@ -75,9 +75,8 @@ const track_list = {
 let btn_display_name = document.querySelector("#list-name");
 // --/Details
 let now_playing = document.querySelector("#now-playing-list");
-let track_art = document.querySelector("#track-picture");
+let track_art = document.querySelector("#track-picture img");
 let track_name = document.querySelector("#track-name");
-let track_name_marquee = document.querySelector("#track-name-marquee");
 let track_artist = document.querySelector("#track-artist");
 // --/Buttons
 let playpause_btn = document.querySelector("#playpause-track");
@@ -190,20 +189,21 @@ seek_slider.addEventListener('mouseup', () => {
  * @returns {void} - No return value
  */
 curr_track.addEventListener('error', () => {
-    total_duration = '00:00';
     alert('Error loading track');
 });
 
-// !######## Not Working ########
+// total_duration.addEventListener('change', () => {
+//     if (total_duration.textContent === 'NaN:NaN') total_duration.textContent = 'LOADING';
+// });
+
 /**
  * Event listener for when an error occurs while loading a track's picture.
  * @returns {void} - No return value
  */
 track_art.addEventListener('error', () => {
-    track_art.src = '/assets/imgs/logo-img.webp';
+    track_art.src = 'assets/imgs/logo-img.webp';
     alert('Error loading image for track');
 });
-// !######## Not Working ########
 
 /**
  * Changes the repeat state of the currently selected list.
@@ -244,19 +244,16 @@ function loadTrack() {
     // --/ Load new Track
     curr_track.src = track_list[curr_list_selected][track_index]['path'];
     // --/ Display Track's details
-    track_art.querySelector('img').src = track_list[curr_list_selected][track_index]['pic']
-    if ((track_list[curr_list_selected][track_index]['name']).length < 24) {
-        track_name.classList.remove('d-none');
-        track_name.textContent = track_list[curr_list_selected][track_index]['name']
-        track_name_marquee.classList.add('d-none');
-    } else {
-        track_name_marquee.classList.remove('d-none');
-        track_name_marquee.textContent = track_list[curr_list_selected][track_index]['name'];
-        track_name.classList.add('d-none');
-    }
+    track_art.src = track_list[curr_list_selected][track_index]['pic'];
+    // --/ Display and checks lenght for TRACK_NAME
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
-    track_artist.textContent = track_list[curr_list_selected][track_index]['artist']
-        // --/ If the ISPLAYING is true continues playing
+    if (track_name.textContent.length < 22) track_name.classList.remove('mtext');
+    else track_name.classList.add('mtext');
+    // --/ Display and checks lenght for TRACK_ARTIST
+    track_artist.textContent = track_list[curr_list_selected][track_index]['artist'];
+    if (track_artist.textContent.length < 22) track_artist.classList.remove('mtext');
+    else track_artist.classList.add('mtext');
+    // --/ If the ISPLAYING is true continues playing
     if (isPlaying) play();
 };
 
