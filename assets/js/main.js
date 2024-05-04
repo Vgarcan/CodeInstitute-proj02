@@ -338,8 +338,14 @@ function prevTrack() {
  * @description Shuffles the order of the songs in the currently selected list and loads the first song.
  */
 function randomizeNextSong() {
+    if (playedTracks.length === track_list[curr_list_selected].length) playedTracks = [];
 
     track_index = Math.floor(Math.random() * track_list[curr_list_selected].length);
+    while (playedTracks.includes(track_index)) {
+        track_index = Math.floor(Math.random() * track_list[curr_list_selected].length);
+    };
+    playedTracks.push(track_index);
+
     loadTrack();
     displayResetValues();
 };
