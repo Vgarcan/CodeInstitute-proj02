@@ -48,6 +48,10 @@ body {
 
 /* DETAILS SECTION */
 
+#mar-con {
+    overflow: hidden;
+}
+
 .lists-icon {
     height: 42px;
 }
@@ -88,20 +92,20 @@ body {
 .marquee {
     width: 100%;
     white-space: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .marquee .mtext {
     display: inline-block;
-    animation: marquee 8s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(110%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
 

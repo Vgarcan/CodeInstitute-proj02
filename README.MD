@@ -247,7 +247,7 @@ Another point raised in the validation is the similarity of link URLs, where man
 
 Lighthouse Validation has played a pivotal role in shaping the development of our project. This invaluable tool has proven to be highly useful throughout the creation process. While we haven't achieved a high score in the PERFORMANCE category, other aspects have excelled, nearly reaching a perfect score. This outcome provides us with valuable insights into areas for improvement, particularly in optimizing image resolutions. Going forward, we aim to enhance the project by addressing the identified performance-related opportunities.
 
-<img src="assets/imgs/readme-pics/ligthhouse-pc.jpg">
+<img src="assets/imgs/readme-pics/pc-lighthouse.png">
 
 Please note that ongoing development may introduce variations that impact specific validations. We appreciate your understanding as we continue to enhance the Dreams Reader Project.
 
