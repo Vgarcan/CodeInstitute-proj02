@@ -144,9 +144,7 @@ selectedList.addEventListener('change', () => {
     btn_display_name.textContent = curr_list_selected;
     document.getElementById('exit-btn').click();
 
-    if (isPlaying) {
-        playpauseTrack();
-    }
+    if (isPlaying) playpauseTrack();
 
     loadTrack();
 });
@@ -184,6 +182,16 @@ seek_slider.addEventListener('mouseup', () => {
     setInterval(updateSeekBarPosition, 1000);
 });
 //! ####################################
+
+curr_track.addEventListener('error', (event) => {
+    // var error = event.target.error;
+    alert("There's a problem with the URL for this track:\n" + track_list[curr_list_selected][track_index]['path']);
+});
+
+track_art.addEventListener('error', (event) => {
+    alert("There's a problem with the PIC for this track:\n" + track_list[curr_list_selected][track_index]['pic']);
+    track_art.src = 'assets/imgs/lemon-stand.webp';
+});
 
 /**
  * Changes the repeat state of the currently selected list.
@@ -223,24 +231,8 @@ function loadTrack() {
     displayResetValues();
     // Display Track's details
     // --/ Load new Track URL
-    let new_track_url = track_list[curr_list_selected][track_index]['path'];
-    fetch(new_track_url)
-        .then(response => {
-            if (response.statusText === 'OK') curr_track.src = track_list[curr_list_selected][track_index]['path'];
-            else alert('URL for this track is unavailable:\n' + new_track_url + '\n' + response.statusText);
-        })
-        .catch(error => console.log('Error with URL for the track:\n', error));
-
-    // --/ Load new Track PIC
-    let new_track_pic = track_list[curr_list_selected][track_index]['pic'];
-    console.log(new_track_pic);
-    fetch(new_track_pic)
-        .then(response => {
-            if (response.statusText === 'OK') track_art.src = track_list[curr_list_selected][track_index]['pic'];
-            else alert('PIC for this track is unavailable:\n' + new_track_pic + '\n' + response.statusText);
-        })
-        .catch(error => console.log('Error with PIC for the track:\n', error));
-
+    curr_track.src = track_list[curr_list_selected][track_index]['path'];
+    track_art.src = track_list[curr_list_selected][track_index]['pic'];
     // --/ Display and checks length for TRACK_NAME
     track_name.textContent = track_list[curr_list_selected][track_index]['name']
     if (track_name.textContent.length < 22) track_name.classList.remove('mtext');
@@ -339,11 +331,9 @@ function prevTrack() {
  */
 function randomizeNextSong() {
     if (playedTracks.length === track_list[curr_list_selected].length) playedTracks = [];
-
     track_index = Math.floor(Math.random() * track_list[curr_list_selected].length);
-    while (playedTracks.includes(track_index)) {
-        track_index = Math.floor(Math.random() * track_list[curr_list_selected].length);
-    };
+    while (playedTracks.includes(track_index)) track_index = Math.floor(Math.random() * track_list[curr_list_selected].length);
+
     playedTracks.push(track_index);
 
     loadTrack();

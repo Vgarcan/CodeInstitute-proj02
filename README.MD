@@ -135,12 +135,15 @@ Additionally, we carefully selected light blue backgrounds to complement these c
 
 <img src="assets/imgs/readme-pics/display-example.png">
 
-### Color Customization Process
- Looking ahead, while color customization isn't currently a feature, it's a future consideration. We're exploring options to streamline color and image customization using JavaScript, making it easier for users to personalize their experience.
 
 ### Future Considerations
 
 In future iterations of the project, additional customization options may be explored, such as icon styles, themes, or advanced color palettes. The goal is to continually enhance the customization capabilities of LimonXemo to provide users with a personalized and enjoyable music listening experience.
+
+#### Color Customization Process
+
+ Looking ahead, while color customization isn't currently a feature, it's a future consideration. We're exploring options to streamline color and image customization using JavaScript, making it easier for users to personalize their experience.
+
 #### User-Friendly Approach
 
 By centralizing color customization in a separate JavaScript file and providing clear instructions and comments, LimonXemo aims to make it effortless for users to tailor the player to their preferences. This user-friendly approach ensures that users can easily adjust colors without the need for extensive technical knowledge or coding expertise.
@@ -212,15 +215,23 @@ Comprehensive testing is conducted to ensure the functionality, performance, and
 ## HTML Validation
 The HTML code has been validated using the W3C Markup Validation Service ([W3C Validator](https://validator.w3.org/)). This ensures that the HTML adheres to the appropriate standards, enhancing compatibility and minimizing potential issues.
 
+
+
+
 <details><summary><b>INDEX Validation</b></summary>
-   <img src="assets/img/readme-pics/val-index.jpg"></details>
+   <img src="assets/imgs/readme-pics/val-html.png"></details>
    <hr>
 
 ## CSS Validation
+<a href="https://jigsaw.w3.org/css-validator/check/referer">
+   <img src="https://jigsaw.w3.org/css-validator/images/vcss"
+      alt="Valid CSS!" />
+</a>
+
 CSS code has been validated using the W3C CSS Validation Service ([W3C CSS Validator](https://jigsaw.w3.org/css-validator/)). It's important to note that while certain warnings were received, these warnings are related to Bootstrap styles. Our project is designed to avoid potential issues associated with Bootstrap defaults, and these warnings do not impact the functionality or appearance of our specific styles.
 
 <details><summary><b>CSS Validation</b></summary>
-   <img src="assets/img/readme-pics/css-advice.jpg"></details>
+   <img src="assets/imgs/readme-pics/val-css.png"></details>
    <hr>
 
 ## Accessibility
@@ -236,6 +247,7 @@ Another point raised in the validation is the similarity of link URLs, where man
 
 Lighthouse Validation has played a pivotal role in shaping the development of our project. This invaluable tool has proven to be highly useful throughout the creation process. While we haven't achieved a high score in the PERFORMANCE category, other aspects have excelled, nearly reaching a perfect score. This outcome provides us with valuable insights into areas for improvement, particularly in optimizing image resolutions. Going forward, we aim to enhance the project by addressing the identified performance-related opportunities.
 
+<img src="assets/imgs/readme-pics/ligthhouse-pc.jpg">
 
 Please note that ongoing development may introduce variations that impact specific validations. We appreciate your understanding as we continue to enhance the Dreams Reader Project.
 
@@ -299,7 +311,7 @@ During testing across various devices, the ChemiPlayer app's compatibility and u
 
 ## Collaborative Efforts
 
-This project has been developed autonomously, without the need for external collaborations. We extend our special thanks to Josué Martín for providing the audio files that served as the foundation for the player's development. Additionally, we acknowledge the valuable contribution of the resources found on the Internet, which were instrumental in advancing this project.
+This project has been developed autonomously, without the need for external collaborations. We extend our special thanks to [Josue Martin](https://www.linkedin.com/in/jmbarragan89) for providing the audio files that served as the foundation for the player's development. Additionally, we acknowledge the valuable contribution of the resources found on the Internet, which were instrumental in advancing this project.
 
 
 ## Current State and Future Plans
@@ -451,7 +463,7 @@ Under the following terms:
 - **ShareAlike:** If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
 For more information about the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License, visit [here](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-.
+
 
 ## Bugs and Challenges
 Throughout the development process, various bugs and challenges may arise. These are diligently addressed and resolved to ensure the stability and reliability of LimonXemo.
