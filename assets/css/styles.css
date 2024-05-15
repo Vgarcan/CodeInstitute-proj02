@@ -92,7 +92,6 @@ body {
 .marquee {
     width: 100%;
     white-space: nowrap;
-    /* overflow: hidden; */
 }
 
 .marquee .mtext {
@@ -164,7 +163,6 @@ i {
 
 #arrow-lists {
     display: none;
-    /* height: 300px; */
     position: absolute;
     left: 13rem;
     width: 7rem;

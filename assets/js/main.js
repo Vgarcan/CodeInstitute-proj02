@@ -55,19 +55,6 @@ const track_list = {
             "path": "assets/audio/maqueta-josu/proj7.mp3"
         },
     ],
-    '**ERROR DISPLAY LIST**': [{
-            "name": "Track with no audio",
-            "artist": "**NO AUDIO**",
-            "pic": "assets/imgs/lemon_music.webp",
-            "path": "path/to/trackCC1.mp3"
-        },
-        {
-            "name": "Track with no picture",
-            "artist": "**NO PICTURE**",
-            "pic": "path/to/trackBC2.jpg",
-            "path": "assets/audio/josus/song4.mp3"
-        },
-    ],
 };
 
 // Create the variables for the display
@@ -113,8 +100,8 @@ rep_lists_names.forEach((name) => {
 });
 
 // Integrate the Select menu in the list section
-lemonList = document.getElementById('lemon-lists');
-selectedList.classList.add('col-6')
+let lemonList = document.getElementById('lemon-lists');
+selectedList.classList.add('col-6');
 selectedList.ariaLabel = 'Select Playlist';
 selectedList.id = 'lemon-selection';
 lemonList.appendChild(selectedList);
@@ -205,18 +192,18 @@ curr_track.addEventListener('ended', () => {
         if (track_index === track_list[curr_list_selected].length - 1 && repeatOn) {
             displayResetValues();
             track_index = 0;
-            playpauseTrack()
+            playpauseTrack();
             loadTrack(track_index);
             playpauseTrack();
         } else if (track_index === track_list[curr_list_selected].length - 1) {
             displayResetValues();
             track_index = 0;
-            playpauseTrack()
+            playpauseTrack();
             loadTrack(track_index);
         } else {
             nextTrack();
-        };
-    };
+        }
+    }
 });
 
 // --- FUNCTIONALITIES SECTION --- //
@@ -234,7 +221,7 @@ function loadTrack() {
     curr_track.src = track_list[curr_list_selected][track_index]['path'];
     track_art.src = track_list[curr_list_selected][track_index]['pic'];
     // --/ Display and checks length for TRACK_NAME
-    track_name.textContent = track_list[curr_list_selected][track_index]['name']
+    track_name.textContent = track_list[curr_list_selected][track_index]['name'];
     if (track_name.textContent.length < 22) track_name.classList.remove('mtext');
     else track_name.classList.add('mtext');
     // --/ Display and checks length for TRACK_ARTIST
@@ -243,7 +230,7 @@ function loadTrack() {
     else track_artist.classList.add('mtext');
     // --/ If the ISPLAYING is TRUE continues playing
     if (isPlaying) play();
-};
+}
 
 /**
  * Resets all values to their default.
@@ -254,7 +241,7 @@ function displayResetValues() {
     curr_time.textContent = "00:00";
     total_duration.textContent = "00:00";
     seek_slider.value = 0;
-};
+}
 
 /**
  * Plays the current track.
@@ -268,7 +255,7 @@ function play() {
     // PAUSE ICON
     playpause_btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
     playpause_btn.getElementsByTagName('i')[0].style.color = 'turquoise';
-};
+}
 
 /**
  * Pauses the current track.
@@ -281,7 +268,7 @@ function pause() {
     // PLAY ICON
     playpause_btn.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
     playpause_btn.getElementsByTagName('i')[0].style.color = '';
-};
+}
 
 /**
  * Plays or pauses the current track when pushed.
@@ -291,7 +278,7 @@ function pause() {
 function playpauseTrack() {
     if (isPlaying) pause();
     else play();
-};
+}
 
 /**
  * Next Track
@@ -301,13 +288,14 @@ function playpauseTrack() {
  */
 function nextTrack() {
     track_index++;
-    if (shuffleOn) randomizeNextSong();
-    else if (track_index > track_list[curr_list_selected].length - 1) {
+    if (shuffleOn) {
+        randomizeNextSong()
+    } else if (track_index > track_list[curr_list_selected].length - 1) {
         track_index = 0;
-    };
+    }
     loadTrack();
     displayResetValues();
-};
+}
 
 /**
  * Previous Track
@@ -319,10 +307,10 @@ function prevTrack() {
     track_index--;
     if (track_index < 0) {
         track_index = track_list[curr_list_selected].length - 1;
-    };
+    }
     loadTrack();
     displayResetValues();
-};
+}
 
 /**
  *  Randomize next Song
@@ -338,7 +326,7 @@ function randomizeNextSong() {
 
     loadTrack();
     displayResetValues();
-};
+}
 
 /**
  * Changes the shuffle state of the currently selected list.
@@ -354,7 +342,7 @@ function shuffleMix() {
         shuffleOn = true;
         shuffle_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
     }
-};
+}
 
 /**
  * Resets the current track to the beginning.
@@ -363,7 +351,7 @@ function shuffleMix() {
  */
 function repeatActualSong() {
     loadTrack();
-};
+}
 
 /**
  * Changes the repeat state of the currently selected list.
@@ -387,8 +375,8 @@ function repeatMix() {
         repeatSameOn = false;
         repeat_mix.getElementsByTagName('i')[0].classList = "bi bi-repeat side-button";
         repeat_mix.getElementsByTagName('i')[0].style.color = 'turquoise';
-    };
-};
+    }
+}
 
 /**
  * Update Track's Times
@@ -407,8 +395,11 @@ function convertTime() {
     ssT = Math.floor(curr_track.currentTime - hhT * 3600 - mmT * 60);
 
     // Format the current time as a string with leading zeros if necessary.
-    if (hhT === 0) hhT = "";
-    else if (hhT < 10) hhT = "0" + hhT + ":";
+    if (hhT === 0) {
+        hhT = ""
+    } else if (hhT < 10) {
+        hhT = "0" + hhT + ":"
+    };
     if (mmT < 10) mmT = "0" + mmT;
     if (ssT < 10) ssT = "0" + ssT;
 
@@ -422,14 +413,17 @@ function convertTime() {
     ssD = Math.floor(curr_track.duration - hhD * 3600 - mmD * 60);
 
     // Format the total duration as a string with leading zeros if necessary.
-    if (hhD === 0) hhD = "";
-    else if (hhD < 10) hhD = "0" + hhD + ":";
+    if (hhD === 0) {
+        hhD = ""
+    } else if (hhD < 10) {
+        hhD = "0" + hhD + ":"
+    };
     if (mmD < 10) mmD = "0" + mmD;
     if (ssD < 10) ssD = "0" + ssD;
 
     // Update the display of the total duration.
     total_duration.textContent = hhD + mmD + ":" + ssD;
-};
+}
 
 /**
  * Seeks to a specific position in the currently playing track.
@@ -437,8 +431,8 @@ function convertTime() {
  * @returns {void} - No return value
  */
 function updateSeekBarPosition() {
-    seek_slider.value = curr_track.currentTime / (curr_track.duration / 100)
-};
+    seek_slider.value = curr_track.currentTime / (curr_track.duration / 100);
+}
 
 /**
  * Seeks to a specific position in the currently playing track.
@@ -448,7 +442,7 @@ function updateSeekBarPosition() {
  */
 function seekTo() {
     curr_track.currentTime = seek_slider.value * (curr_track.duration / 100);
-};
+}
 
 /**
  * Sets the volume of the currently playing track.
@@ -457,7 +451,7 @@ function seekTo() {
  */
 function setVolume() {
     curr_track.volume = volume_slider.value / 100;
-};
+}
 
 // INITIALIZE PROGRAM
 // --/ starts the list
