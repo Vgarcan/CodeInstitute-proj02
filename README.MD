@@ -241,9 +241,7 @@ Accessibility has been a priority throughout the development process. The projec
 
 ## Wave Validation
 
-The Wave Validation has been conducted, revealing zero errors and a few alerts. One of the alerts pertains to the visual presentation, suggesting potential issues with the visibility of headings in pink against a white background. However, user testing has shown no problems with readability or visibility, and we have chosen to disregard this alert. Additionally, a similar issue is observed on the diary page, where the pink date may encounter responsiveness challenges. Despite this, visual inspection and user testing confirm that the content is visible and accessible.
-
-Another point raised in the validation is the similarity of link URLs, where many are relative and deemed similar. Given the ongoing development and redirection to a 404 page, these URLs remain as such for the time being. It's acknowledged that this might affect the Wave Validation but is considered in the context of the evolving project.
+The Wave Validation shows 0 erros, 0 contrast errors and 5 alerts. These alerts are related to buttons, specifically the lack of a keyboard event handler. Currently, we only have click event handlers, which could impact accessibility on devices reliant on keyboard events. However, since our current focus is on touchscreen device accessibility, we have prioritized click events and will leave the implementation of keyboard events for future iterations of the project. With these considerations, we deem the Wave Validation approved, with 0 errors and 0 contrast errors, and the identified alerts do not pose significant issues for the current functionality of the project.
 
 ## Lighthouse Validation
 
@@ -468,7 +466,22 @@ For more information about the Creative Commons Attribution-NonCommercial-ShareA
 
 
 ## Bugs and Challenges
-Throughout the development process, various bugs and challenges may arise. These are diligently addressed and resolved to ensure the stability and reliability of LimonXemo.
+As for bugs, we have encountered a few issues that arise when reloading or initially loading the page. I believe this is related to cache-related issues. One bug we've found is that occasionally, when loading a track within the audio element, it displays a duration of NaN (Not a Number). The problem with this is that depending on the connection speed and cache, it sometimes shows NaN instead of the total duration of the track for a brief period until the track is fully loaded, at which point the program can continue.
+
+Another bug we've encountered is with the audio track slider. Since we have a timer set up in JavaScript to update the slider every minute to show the current progress, the issue arises when attempting to drag the slider node. If you hold down the slider node while dragging, it tries to return to its original position every second due to the ongoing updates. We've identified the code section in JavaScript where this bug occurs, specifically between two commented lines related to event listeners for this element. We've attempted to address this by changing the event listener and trying various solutions, but unfortunately, we haven't found a resolution yet. This is a bug that will need to be addressed in the future.
+
+```javascript
+// MAIN.JS at line 164 to 170
+//! ####################################
+seek_slider.addEventListener('input', () => {
+    clearInterval(updateSeekBarPosition);
+});
+
+seek_slider.addEventListener('mouseup', () => {
+    setInterval(updateSeekBarPosition, 1000);
+});
+//! ####################################
+```
 
 # Acknowledgement
 
