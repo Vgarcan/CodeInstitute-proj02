@@ -49,28 +49,28 @@
                 <div id="buttons" class="row d-flex py-1 sect-slice spread-shadow">
 
                     <!-- Button #1 - Shuffle -->
-                    <div id="shuffle-mix" class="col-2 align-self-center " onclick="shuffleMix()">
+                    <div id="shuffle-mix" class="col-2 align-self-center " aria-label="Toggle Shuffle Mix" onclick="shuffleMix()">
                         <i class="bi bi-shuffle side-button"></i>
                     </div>
 
                     <div id="main-buttons-display" class="col-8 d-flex justify-content-center">
                         <!-- Button #A - Previous -->
-                        <div id="prev-track" class="px-2 text-end align-self-center" onclick="prevTrack()">
+                        <div id="prev-track" class="px-2 text-end align-self-center" aria-label="Go back" onclick="prevTrack()">
                             <i class="bi bi-skip-backward-btn-fill"></i>
                         </div>
                         <!-- Button #B - Play/Pause -->
-                        <div id="playpause-track" class="px-2" onclick="playpauseTrack()">
+                        <div id="playpause-track" class="px-2" aria-label="Play or pause the track" onclick="playpauseTrack()">
                             <i class="bi bi-play-circle-fill"></i>
                         </div>
                         <!-- Button #C - Next -->
-                        <div id="next-track" class="px-2 text-start align-self-center" onclick="nextTrack()">
+                        <div id="next-track" class="px-2 text-start align-self-center" aria-label="Skip track" onclick="nextTrack()">
                             <i class="bi bi-skip-forward-btn-fill"></i>
                         </div>
                     </div>
 
 
                     <!-- Button #2 - Repeat -->
-                    <div id="repeat-mix" class="col-2 align-self-center " onclick="repeatMix()">
+                    <div id="repeat-mix" class="col-2 align-self-center " aria-label="Toggle Repeat" onclick="repeatMix()">
                         <i class="bi bi-repeat side-button"></i>
                     </div>
                 </div>
