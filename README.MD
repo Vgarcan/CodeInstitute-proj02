@@ -51,6 +51,8 @@ Xemusic is a personal project initiated by the need to address the musical showc
 
 Driven by the desire to delve into audio software development, Xemusic aims to provide a platform for experimentation and learning. Limonxemo, the primary outcome of this endeavor, represents a starting point in this journey. It is a versatile music player application designed not only for music playback but also for podcast streaming, showcasing its adaptability and multifunctionality.
 
+<img src="assets/imgs/readme-pics/mockup-example.png">
+
 With Limonxemo, users can enjoy seamless audio playback experiences, whether they are listening to their favorite tracks or engaging with compelling podcast content. The project aspires to transcend beyond traditional music players by offering support for various audio formats and catering to the diverse needs of creators and listeners alike.
 
 ## Technologies Used
