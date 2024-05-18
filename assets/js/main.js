@@ -208,6 +208,31 @@ curr_track.addEventListener('ended', () => {
 
 // --- FUNCTIONALITIES SECTION --- //
 
+// Function to handle key press events
+function handleKeyPress(event) {
+    switch (event.key) {
+        case ' ':
+            playpauseTrack(); // Spacebar for play/pause
+            break;
+        case 'R':
+        case 'r':
+            repeatMix(); // R for repeat
+            break;
+        case 'S':
+        case 's':
+            shuffleMix(); // S for shuffle
+            break;
+        case 'ArrowLeft':
+            prevTrack(); // Arrow left for previous track
+            break;
+        case 'ArrowRight':
+            nextTrack(); // Arrow right for next track
+            break;
+        default:
+            break;
+    }
+}
+
 /**
  * Loads a track to the audio element.
  * @function loadTrack

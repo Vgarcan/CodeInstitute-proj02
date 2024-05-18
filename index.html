@@ -43,34 +43,31 @@
                         </div>
                     </div>
                 </div>
-                <!-- END INFO SECTION -->
-
                 <!-- BUTTONS SECTION -->
                 <div id="buttons" class="row d-flex py-1 sect-slice spread-shadow">
 
                     <!-- Button #1 - Shuffle -->
-                    <div id="shuffle-mix" class="col-2 align-self-center " aria-label="Toggle Shuffle Mix" onclick="shuffleMix()">
+                    <div id="shuffle-mix" class="col-2 align-self-center" aria-label="Toggle Shuffle Mix" tabindex="0" onclick="shuffleMix()" onkeydown="handleKeyPress(event)">
                         <i class="bi bi-shuffle side-button"></i>
                     </div>
 
                     <div id="main-buttons-display" class="col-8 d-flex justify-content-center">
                         <!-- Button #A - Previous -->
-                        <div id="prev-track" class="px-2 text-end align-self-center" aria-label="Go back" onclick="prevTrack()">
+                        <div id="prev-track" class="px-2 text-end align-self-center" aria-label="Go back" tabindex="0" onclick="prevTrack()" onkeydown="handleKeyPress(event)">
                             <i class="bi bi-skip-backward-btn-fill"></i>
                         </div>
                         <!-- Button #B - Play/Pause -->
-                        <div id="playpause-track" class="px-2" aria-label="Play or pause the track" onclick="playpauseTrack()">
+                        <div id="playpause-track" class="px-2" aria-label="Play or pause the track" tabindex="0" onclick="playpauseTrack()" onkeydown="handleKeyPress(event)">
                             <i class="bi bi-play-circle-fill"></i>
                         </div>
                         <!-- Button #C - Next -->
-                        <div id="next-track" class="px-2 text-start align-self-center" aria-label="Skip track" onclick="nextTrack()">
+                        <div id="next-track" class="px-2 text-start align-self-center" aria-label="Skip track" tabindex="0" onclick="nextTrack()" onkeydown="handleKeyPress(event)">
                             <i class="bi bi-skip-forward-btn-fill"></i>
                         </div>
                     </div>
 
-
                     <!-- Button #2 - Repeat -->
-                    <div id="repeat-mix" class="col-2 align-self-center " aria-label="Toggle Repeat" onclick="repeatMix()">
+                    <div id="repeat-mix" class="col-2 align-self-center" aria-label="Toggle Repeat" tabindex="0" onclick="repeatMix()" onkeydown="handleKeyPress(event)">
                         <i class="bi bi-repeat side-button"></i>
                     </div>
                 </div>
