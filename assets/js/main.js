@@ -172,11 +172,11 @@ seek_slider.addEventListener('mouseup', () => {
 
 curr_track.addEventListener('error', (event) => {
     // var error = event.target.error;
-    alert("There's a problem with the URL for this track:\n" + track_list[curr_list_selected][track_index]['path']);
+    alert("There's a problem with the URL for this track:\n" + track_list[curr_list_selected][track_index].path);
 });
 
 track_art.addEventListener('error', (event) => {
-    alert("There's a problem with the PIC for this track:\n" + track_list[curr_list_selected][track_index]['pic']);
+    alert("There's a problem with the PIC for this track:\n" + track_list[curr_list_selected][track_index].pic);
     track_art.src = 'assets/imgs/lemon-stand.webp';
 });
 
@@ -218,14 +218,14 @@ function loadTrack() {
     displayResetValues();
     // Display Track's details
     // --/ Load new Track URL
-    curr_track.src = track_list[curr_list_selected][track_index]['path'];
-    track_art.src = track_list[curr_list_selected][track_index]['pic'];
+    curr_track.src = track_list[curr_list_selected][track_index].path;
+    track_art.src = track_list[curr_list_selected][track_index].pic;
     // --/ Display and checks length for TRACK_NAME
-    track_name.textContent = track_list[curr_list_selected][track_index]['name'];
+    track_name.textContent = track_list[curr_list_selected][track_index].name;
     if (track_name.textContent.length < 22) track_name.classList.remove('mtext');
     else track_name.classList.add('mtext');
     // --/ Display and checks length for TRACK_ARTIST
-    track_artist.textContent = track_list[curr_list_selected][track_index]['artist'];
+    track_artist.textContent = track_list[curr_list_selected][track_index].artist;
     if (track_artist.textContent.length < 22) track_artist.classList.remove('mtext');
     else track_artist.classList.add('mtext');
     // --/ If the ISPLAYING is TRUE continues playing
@@ -289,7 +289,7 @@ function playpauseTrack() {
 function nextTrack() {
     track_index++;
     if (shuffleOn) {
-        randomizeNextSong()
+        randomizeNextSong();
     } else if (track_index > track_list[curr_list_selected].length - 1) {
         track_index = 0;
     }
@@ -396,10 +396,10 @@ function convertTime() {
 
     // Format the current time as a string with leading zeros if necessary.
     if (hhT === 0) {
-        hhT = ""
+        hhT = "";
     } else if (hhT < 10) {
-        hhT = "0" + hhT + ":"
-    };
+        hhT = "0" + hhT + ":";
+    }
     if (mmT < 10) mmT = "0" + mmT;
     if (ssT < 10) ssT = "0" + ssT;
 
@@ -414,10 +414,10 @@ function convertTime() {
 
     // Format the total duration as a string with leading zeros if necessary.
     if (hhD === 0) {
-        hhD = ""
+        hhD = "";
     } else if (hhD < 10) {
-        hhD = "0" + hhD + ":"
-    };
+        hhD = "0" + hhD + ":";
+    }
     if (mmD < 10) mmD = "0" + mmD;
     if (ssD < 10) ssD = "0" + ssD;
 
