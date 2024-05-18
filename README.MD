@@ -34,6 +34,7 @@
    - [Accessibility](#accessibility)
    - [Wave Validation](#wave-validation)
    - [Lighthouse Validation](#lighthouse-validation)
+   - [JSHint Validation](#jshint-validation)
    - [Device testing](#device-testing)
    - [Browser Compatibility](#browser-compatibility)
    - [User Stories Testing](#user-stories-testing)
