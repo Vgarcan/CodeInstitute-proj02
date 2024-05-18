@@ -15,6 +15,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
   - [CSS Management for Project Structure](#css-management-for-project-structure)
@@ -54,6 +55,62 @@ Driven by the desire to delve into audio software development, Xemusic aims to p
 <img src="assets/imgs/readme-pics/mockup-example.png">
 
 With Limonxemo, users can enjoy seamless audio playback experiences, whether they are listening to their favorite tracks or engaging with compelling podcast content. The project aspires to transcend beyond traditional music players by offering support for various audio formats and catering to the diverse needs of creators and listeners alike.
+
+## Features
+### Dynamic Background Change
+
+One unique feature of this project is the dynamic background that changes according to the time of day. Using JavaScript's built-in `Date` object, the application fetches the current time from the user's browser and adjusts the background accordingly:
+
+- **Morning:** A background with a sun and clouds.
+- **Night:** A background with a moon and clouds.
+
+The logic is as follows:
+- If the current time is between 7 PM and 5 AM, the background switches to night mode.
+- Otherwise, it remains in day mode.
+
+This feature enhances the user experience by providing a visually pleasing and context-aware interface.
+
+Here's an example of the implementation:
+
+```javascript
+// TIME FETCHING
+const time = (new Date()).getHours();
+if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.webp')";
+else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.webp')";
+
+```
+
+### Music Playback
+
+The core feature of the project is seamless music playback. Users can select and play tracks from the music library without interruptions. This includes:
+
+- **Play/Pause:** Easily play or pause the current track.
+- **Skip Forward/Backward:** Move to the next or previous track with a simple click.
+- **Seek:** Use the slider to jump to different parts of the track.
+
+### Playlists Management
+
+Users can manage their music library effectively with features like:
+
+- **Add/Remove Tracks:** Easily add or remove tracks from the library.
+- **Organize Playlists:** Create, edit, and delete playlists to keep your music organized.
+
+### Responsive Design
+
+The application is designed to work seamlessly across different devices and screen sizes, providing an optimal user experience on both desktop and mobile devices.
+
+### Accessibility Features
+
+To ensure the application is accessible to as many users as possible, it includes:
+
+- **Keyboard Navigation:** Navigate the interface using keyboard shortcuts.
+- **Screen Reader Support:** Compatible with screen readers to assist visually impaired users.
+
+### Volume Control
+
+Users can adjust the volume of the playback directly from the player interface. This includes:
+
+- **Volume Slider:** Drag the slider to adjust the volume level.
 
 ## Technologies Used
 
@@ -241,7 +298,7 @@ Accessibility has been a priority throughout the development process. The projec
 
 ## Wave Validation
 
-The Wave Validation shows 0 erros, 0 contrast errors and 5 alerts. These alerts are related to buttons, specifically the lack of a keyboard event handler. Currently, we only have click event handlers, which could impact accessibility on devices reliant on keyboard events. However, since our current focus is on touchscreen device accessibility, we have prioritized click events and will leave the implementation of keyboard events for future iterations of the project. With these considerations, we deem the Wave Validation approved, with 0 errors and 0 contrast errors, and the identified alerts do not pose significant issues for the current functionality of the project.
+The Wave Validation shows 0 errors, 0 contrast errors, and 0 alerts. Previously, there were alerts related to buttons, specifically the lack of a keyboard event handler. These alerts have been resolved by adding appropriate keyboard event handlers for buttons, ensuring better accessibility for devices reliant on keyboard events. With these considerations, we deem the Wave Validation approved, with 0 errors and 0 contrast errors. The project now meets the necessary accessibility standards for both touchscreen and keyboard navigation.
 
 ## Lighthouse Validation
 
@@ -250,6 +307,26 @@ Lighthouse Validation has played a pivotal role in shaping the development of ou
 <img src="assets/imgs/readme-pics/pc-lighthouse.png">
 
 Please note that ongoing development may introduce variations that impact specific validations. We appreciate your understanding as we continue to enhance the Dreams Reader Project.
+
+## JShint Validation
+
+During JShint validation, several variables were identified as unused:
+
+- **Eight unused variables:**
+  - Line 64: `now_playing`
+  - Line 70: `next_btn`
+  - Line 71: `prev_btn`
+  - Line 306: `prevTrack`
+  - Line 337: `shuffleMix`
+  - Line 362: `repeatMix`
+  - Line 443: `seekTo`
+  - Line 452: `setVolume`
+
+Although JSHint indicates these variables are unused, they are indeed in use within our code. These variables are associated with EventListeners, which might not be recognized correctly by JSHint during the validation process. Consequently, despite JSHint's warnings, these variables are crucial for the application's functionality.
+
+Additionally, JSHint raised some alerts regarding the usage of ES6 features in our JavaScript code. We acknowledge these alerts; however, thanks to modern browsers, ES6 compatibility is generally not an issue. Almost all current browsers support ES6, ensuring our code runs smoothly across different platforms.
+
+Overall, we consider the JSHint validation a success. While it has highlighted certain alerts, they do not pose any issues for our code's performance. The identified variables, though flagged, are integral to the application's operation due to their association with EventListeners.
 
 ## Device Testing
 The project has undergone testing on various devices, including desktops, laptops, tablets, and smartphones. This ensures responsiveness and functionality across different screen sizes and resolutions.
