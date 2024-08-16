@@ -1,4 +1,23 @@
 const track_list = {
+    'XemAI': [{
+            "name": "Electric Gods",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/electricgods.webp",
+            "path": "assets/audio/xemai/electricgods.mp3"
+        },
+        {
+            "name": "The Hunter",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/thehunter.webp",
+            "path": "assets/audio/xemai/thehunter.mp3"
+        },
+        {
+            "name": "Backender",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/backender.webp",
+            "path": "assets/audio/xemai/backender.mp3"
+        },
+    ],
     'JMP Studio': [{
             "name": "West Virginia (Diego - Cover)",
             "artist": "JMP",
@@ -117,10 +136,15 @@ let repeatSameOn = false;
 curr_track.volume = volume_slider.value / 100;
 let playedTracks = [];
 
-// TIME FETCHING
-const time = (new Date()).getHours();
-if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.webp')";
-else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.webp')";
+if (curr_list_selected === 'XemAI') {
+    document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/matrix-bg.webp')";
+} else {
+    // TIME FETCHING
+    const time = (new Date()).getHours();
+    if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.webp')";
+    else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.webp')";
+}
+
 
 
 // EVENTS LISTENERS //
