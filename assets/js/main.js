@@ -136,15 +136,7 @@ let repeatSameOn = false;
 curr_track.volume = volume_slider.value / 100;
 let playedTracks = [];
 
-if (curr_list_selected === 'XemAI') {
-    document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/matrix-bg.webp')";
-} else {
-    // TIME FETCHING
-    const time = (new Date()).getHours();
-    if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.webp')";
-    else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.webp')";
-}
-
+changeBackgroundPic(curr_list_selected)
 
 
 // EVENTS LISTENERS //
@@ -158,6 +150,8 @@ selectedList.addEventListener('change', () => {
     if (isPlaying) playpauseTrack();
 
     loadTrack();
+
+    changeBackgroundPic(curr_list_selected);
 });
 
 /**
@@ -231,6 +225,26 @@ curr_track.addEventListener('ended', () => {
 });
 
 // --- FUNCTIONALITIES SECTION --- //
+
+/**
+ * Changes the background image based on the selected playlist.
+ * @function changeBackgroundPic
+ * @param {string} actualList - The name of the currently selected playlist.
+ * @returns {void} - No return value.
+ * @description This function changes the background image of the webpage based on the selected playlist.
+ * If the selected playlist is 'XemAI', the background image is set to a matrix-like image.
+ * If the selected playlist is not 'XemAI', the background image is set to a sky background image during daytime (6 AM to 6 PM) and a night background image during nighttime (6 PM to 6 AM).
+ */
+function changeBackgroundPic(actualList) {
+    if (actualList === 'XemAI') {
+        document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/matrix-bg.webp')";
+    } else {
+        // TIME FETCHING
+        const time = (new Date()).getHours();
+        if (time >= 19 || time <= 5) document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/bg-night-min.webp')";
+        else document.body.style.backgroundImage = "url('/CodeInstitute-proj02/assets/imgs/skybg-min.webp')";
+    }
+}
 
 // Function to handle key press events
 function handleKeyPress(event) {
