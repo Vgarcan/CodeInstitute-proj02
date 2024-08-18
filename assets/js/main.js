@@ -12,6 +12,12 @@ const track_list = {
             "path": "assets/audio/xemai/ranks.mp3"
         },
         {
+            "name": "Zombie",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/zombie.webp",
+            "path": "assets/audio/xemai/zombie.mp3"
+        },
+        {
             "name": "The Hunter",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/thehunter.webp",
@@ -24,16 +30,41 @@ const track_list = {
             "path": "assets/audio/xemai/threelines.mp3"
         },
         {
+            "name": "Broken Lines",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/brokenline.webp",
+            "path": "assets/audio/xemai/brokenline.mp3"
+        },
+        {
             "name": "Backender",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/backender.webp",
             "path": "assets/audio/xemai/backender.mp3"
         },
+    ],
+    'Anderson & Smith': [{
+            "name": "La manita",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/lamanita.webp",
+            "path": "assets/audio/ans/lamanita.mp3"
+        },
         {
-            "name": "Bicycle",
-            "artist": "XemAI",
-            "pic": "assets/audio/xemai/bicycle.webp",
-            "path": "assets/audio/xemai/bicycle.mp3"
+            "name": "Salsamaleon",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/karma.webp",
+            "path": "assets/audio/ans/karma.mp3"
+        },
+        {
+            "name": "El Pollo",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/pollo.webp",
+            "path": "assets/audio/ans/pollo.mp3"
+        },
+        {
+            "name": "Mi colega",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/micolega.webp",
+            "path": "assets/audio/ans/micolega.mp3"
         },
     ],
     'JMP Studio': [{
