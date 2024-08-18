@@ -18,6 +18,12 @@ const track_list = {
             "path": "assets/audio/xemai/zombie.mp3"
         },
         {
+            "name": "Castle",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/castle.webp",
+            "path": "assets/audio/xemai/castle.mp3"
+        },
+        {
             "name": "The Hunter",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/thehunter.webp",
@@ -36,6 +42,12 @@ const track_list = {
             "path": "assets/audio/xemai/brokenline.mp3"
         },
         {
+            "name": "Just a Walk",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/walk.webp",
+            "path": "assets/audio/xemai/walk.mp3"
+        },
+        {
             "name": "Backender",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/backender.webp",
@@ -49,39 +61,51 @@ const track_list = {
         },
     ],
     'Anderson & Smith': [{
+            "name": "Y como es aquello?",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/easy.webp",
+            "path": "assets/audio/ans/venezuela.mp3"
+        },
+        {
+            "name": "Sevilla",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/easy.webp",
+            "path": "assets/audio/ans/sevilla.mp3"
+        },
+        {
             "name": "La manita",
             "artist": "Anderson & Smith",
-            "pic": "assets/audio/ans/lamanita.webp",
+            "pic": "assets/audio/ans/easy.webp",
             "path": "assets/audio/ans/lamanita.mp3"
         },
         {
             "name": "Salsamaleon",
             "artist": "Anderson & Smith",
-            "pic": "assets/audio/ans/karma.webp",
+            "pic": "assets/audio/ans/easy.webp",
             "path": "assets/audio/ans/karma.mp3"
         },
         {
             "name": "Hit me Baby one more time",
             "artist": "Anderson & Smith",
-            "pic": "assets/audio/ans/baby.webp",
+            "pic": "assets/audio/ans/easy.webp",
             "path": "assets/audio/ans/baby.mp3"
         },
         {
             "name": "El Pollo",
             "artist": "Anderson & Smith",
-            "pic": "assets/audio/ans/pollo.webp",
+            "pic": "assets/audio/ans/easy.webp",
             "path": "assets/audio/ans/pollo.mp3"
         },
         {
             "name": "Mi colega",
             "artist": "Anderson & Smith",
-            "pic": "assets/audio/ans/micolega.webp",
+            "pic": "assets/audio/ans/easy.webp",
             "path": "assets/audio/ans/micolega.mp3"
         },
         {
             "name": "Fiera Inquieta",
             "artist": "Anderson & Smith",
-            "pic": "assets/audio/ans/fiera.webp",
+            "pic": "assets/audio/ans/easy.webp",
             "path": "assets/audio/ans/fiera.mp3"
         },
     ],
