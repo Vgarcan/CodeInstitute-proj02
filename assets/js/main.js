@@ -6,10 +6,22 @@ const track_list = {
             "path": "assets/audio/xemai/electricgods.mp3"
         },
         {
+            "name": "Ranks",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/ranks.webp",
+            "path": "assets/audio/xemai/ranks.mp3"
+        },
+        {
             "name": "The Hunter",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/thehunter.webp",
             "path": "assets/audio/xemai/thehunter.mp3"
+        },
+        {
+            "name": "Three Lines",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/threelines.webp",
+            "path": "assets/audio/xemai/threelines.mp3"
         },
         {
             "name": "Backender",
