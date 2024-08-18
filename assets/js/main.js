@@ -55,6 +55,12 @@ const track_list = {
             "path": "assets/audio/ans/karma.mp3"
         },
         {
+            "name": "Hit me Baby one more time",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/baby.webp",
+            "path": "assets/audio/ans/baby.mp3"
+        },
+        {
             "name": "El Pollo",
             "artist": "Anderson & Smith",
             "pic": "assets/audio/ans/pollo.webp",
@@ -65,6 +71,12 @@ const track_list = {
             "artist": "Anderson & Smith",
             "pic": "assets/audio/ans/micolega.webp",
             "path": "assets/audio/ans/micolega.mp3"
+        },
+        {
+            "name": "Fiera Inquieta",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/fiera.webp",
+            "path": "assets/audio/ans/fiera.mp3"
         },
     ],
     'JMP Studio': [{
