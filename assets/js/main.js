@@ -29,6 +29,12 @@ const track_list = {
             "pic": "assets/audio/xemai/backender.webp",
             "path": "assets/audio/xemai/backender.mp3"
         },
+        {
+            "name": "Bicycle",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/bicycle.webp",
+            "path": "assets/audio/xemai/bicycle.mp3"
+        },
     ],
     'JMP Studio': [{
             "name": "West Virginia (Diego - Cover)",
