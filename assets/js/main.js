@@ -26,7 +26,7 @@ const track_list = {
         {
             "name": "Dancing DIV",
             "artist": "XemAI",
-            "pic": "assets/audio/xemai/bailando.webp",
+            "pic": "assets/audio/xemai/bailando2.webp",
             "path": "assets/audio/xemai/bailando.mp3"
         },
         {
