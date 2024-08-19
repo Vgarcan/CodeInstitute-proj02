@@ -42,22 +42,34 @@ const track_list = {
             "path": "assets/audio/xemai/docume.mp3"
         },
         {
-            "name": "Three Lines",
-            "artist": "XemAI",
-            "pic": "assets/audio/xemai/threelines.webp",
-            "path": "assets/audio/xemai/threelines.mp3"
-        },
-        {
             "name": "Broken Line",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/brokenline.webp",
             "path": "assets/audio/xemai/brokenline.mp3"
         },
         {
+            "name": "Three Lines",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/threelines.webp",
+            "path": "assets/audio/xemai/threelines.mp3"
+        },
+        {
+            "name": "C.R.U.D. Crew",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/crud.webp",
+            "path": "assets/audio/xemai/crud.mp3"
+        },
+        {
             "name": "Backender",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/backender.webp",
             "path": "assets/audio/xemai/backender.mp3"
+        },
+        {
+            "name": "Clear Design",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/lofeando.webp",
+            "path": "assets/audio/xemai/lofeando.mp3"
         },
         {
             "name": "Bicycle",
