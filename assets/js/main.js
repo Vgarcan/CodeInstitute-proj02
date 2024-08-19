@@ -24,10 +24,22 @@ const track_list = {
             "path": "assets/audio/xemai/castle.mp3"
         },
         {
+            "name": "Dancing DIV",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/bailando.webp",
+            "path": "assets/audio/xemai/bailando.mp3"
+        },
+        {
             "name": "The Hunter",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/thehunter.webp",
             "path": "assets/audio/xemai/thehunter.mp3"
+        },
+        {
+            "name": "Keep it Clear",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/docume.webp",
+            "path": "assets/audio/xemai/docume.mp3"
         },
         {
             "name": "Three Lines",
@@ -36,16 +48,10 @@ const track_list = {
             "path": "assets/audio/xemai/threelines.mp3"
         },
         {
-            "name": "Broken Lines",
+            "name": "Broken Line",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/brokenline.webp",
             "path": "assets/audio/xemai/brokenline.mp3"
-        },
-        {
-            "name": "Just a Walk",
-            "artist": "XemAI",
-            "pic": "assets/audio/xemai/walk.webp",
-            "path": "assets/audio/xemai/walk.mp3"
         },
         {
             "name": "Backender",
