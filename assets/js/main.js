@@ -54,6 +54,12 @@ const track_list = {
             "path": "assets/audio/xemai/threelines.mp3"
         },
         {
+            "name": "Bad Decission",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/peste.webp",
+            "path": "assets/audio/xemai/peste.mp3"
+        },
+        {
             "name": "C.R.U.D. Crew",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/crud.webp",
@@ -64,6 +70,12 @@ const track_list = {
             "artist": "XemAI",
             "pic": "assets/audio/xemai/backender.webp",
             "path": "assets/audio/xemai/backender.mp3"
+        },
+        {
+            "name": "Freedom",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/dayoff.webp",
+            "path": "assets/audio/xemai/dayoff.mp3"
         },
         {
             "name": "Clear Design",
