@@ -97,6 +97,12 @@ const track_list = {
             "path": "assets/audio/ans/venezuela.mp3"
         },
         {
+            "name": "No Sabia",
+            "artist": "Anderson & Smith",
+            "pic": "assets/audio/ans/no-sabia.webp",
+            "path": "assets/audio/ans/no-sabia.mp3"
+        },
+        {
             "name": "Sevilla",
             "artist": "Anderson & Smith",
             "pic": "assets/audio/ans/easy.webp",
