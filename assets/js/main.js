@@ -48,6 +48,12 @@ const track_list = {
             "path": "assets/audio/xemai/brokenline.mp3"
         },
         {
+            "name": "The Cookie Witch",
+            "artist": "XemAI",
+            "pic": "assets/audio/xemai/witch.webp",
+            "path": "assets/audio/xemai/witch.mp3"
+        },
+        {
             "name": "Three Lines",
             "artist": "XemAI",
             "pic": "assets/audio/xemai/threelines.webp",
